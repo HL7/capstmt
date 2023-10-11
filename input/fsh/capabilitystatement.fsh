@@ -4,11 +4,14 @@
 Profile: CapabilityStatement2
 Parent: CapabilityStatement
 Description: "An example profile of the CapabilityStatement resource."
-* name 1..1 MS
+* name 0..1 MS
+* messaging 0..0
+* document 0..0
 
 Instance: CapabilityStatement2Example
 InstanceOf: CapabilityStatement2
 Description: "An example of a CapabilityStatement with a license to krill."
+Usage: #example
 * name = "Example CapabilityStatement"
 * status = #draft
 * date = 2023-10-11
