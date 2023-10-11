@@ -1,11 +1,10 @@
-CodeSystem: CapabilityFeatures
-Id: capability-features
+CodeSystem: CapabilityFeaturesCS
+Id: capability-features-cs
 Title: "Capability Features"
 Description: "A feature that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
-* ^meta.lastUpdated = "2021-12-19T08:15:41.873+11:00"
-* ^version = "5.0.0-snapshot1"
+* ^version = "4.0.1"
 * ^status = #active
-* ^date = "2020-09-21"
+* ^date = "2023-10-11"
 * ^publisher = "HL7 (FHIR Project)"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
@@ -13,6 +12,7 @@ Description: "A feature that may be declared in a capability statement. For disc
 * ^content = #complete
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * #features "Root concept for all feature definitions"
 * #features ^property[0].code = #kind
 * #features ^property[=].valueCode = #internal
@@ -114,6 +114,24 @@ Description: "A feature that may be declared in a capability statement. For disc
 * #features #searchRevInclude ^property[=].valueCode = #rest.resource
 * #features #searchRevInclude ^property[+].code = #values
 * #features #searchRevInclude ^property[=].valueCode = #http://hl7.org/fhir/ValueSet/search-parameters
+
+
+
+CodeSystem: CapabilityFeatureValuesCS
+Id: capability-feature-value-cs
+Title: "Capability Feature Values"
+Description: "A feature value that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
+* ^version = "4.0.1"
+* ^status = #active
+* ^date = "2023-10-11"
+* ^publisher = "HL7 (FHIR Project)"
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
+* ^compositional = true
+* ^content = #complete
+* ^copyright = "This CodeSystem is not copyrighted."
+* ^experimental = false
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * #values "Root concept for all feature values"
 * #values ^property[0].code = #kind
 * #values ^property[=].valueCode = #internal
@@ -126,18 +144,18 @@ Description: "A feature that may be declared in a capability statement. For disc
 * #values #booleans #false "Value is false"
 * #values #booleans #false ^property[+].code = #kind
 * #values #booleans #false ^property[=].valueCode = #value
-* #values #version "Values for versioning feature"
-* #values #version ^property[+].code = #kind
-* #values #version ^property[=].valueCode = #internal
-* #values #version #no-version "No VersionId Support" "VersionId meta-property is not supported (server) or used (client)."
-* #values #version #no-version ^property[+].code = #kind
-* #values #version #no-version ^property[=].valueCode = #value
-* #values #version #versioned "Versioned" "VersionId meta-property is supported (server) or used (client)."
-* #values #version #versioned ^property[+].code = #kind
-* #values #version #versioned ^property[=].valueCode = #value
-* #values #version #versioned-update "VersionId tracked fully" "VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client)."
-* #values #version #versioned-update ^property[+].code = #kind
-* #values #version #versioned-update ^property[=].valueCode = #value
+* #values #versioning "Values for versioning feature"
+* #values #versioning ^property[+].code = #kind
+* #values #versioning ^property[=].valueCode = #internal
+* #values #versioning #no-version "No VersionId Support" "VersionId meta-property is not supported (server) or used (client)."
+* #values #versioning #no-version ^property[+].code = #kind
+* #values #versioning #no-version ^property[=].valueCode = #value
+* #values #versioning #versioned "Versioned" "VersionId meta-property is supported (server) or used (client)."
+* #values #versioning #versioned ^property[+].code = #kind
+* #values #versioning #versioned ^property[=].valueCode = #value
+* #values #versioning #versioned-update "VersionId tracked fully" "VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client)."
+* #values #versioning #versioned-update ^property[+].code = #kind
+* #values #versioning #versioned-update ^property[=].valueCode = #value
 * #values #conditional-read-status "Values for conditional-read-status"
 * #values #conditional-read-status ^property[+].code = #kind
 * #values #conditional-read-status ^property[=].valueCode = #internal
@@ -184,6 +202,23 @@ Description: "A feature that may be declared in a capability statement. For disc
 * #values #reference-handling-policy #local "Local References Only" "The server does not support references that point to other servers."
 * #values #reference-handling-policy #local ^property[+].code = #kind
 * #values #reference-handling-policy #local ^property[=].valueCode = #value
+
+
+CodeSystem: CapabilityContextCS
+Id: capability-context-cs
+Title: "Capability Context"
+Description: "A context that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
+* ^version = "4.0.1"
+* ^status = #active
+* ^date = "2023-10-11"
+* ^publisher = "HL7 (FHIR Project)"
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
+* ^compositional = true
+* ^content = #complete
+* ^copyright = "This CodeSystem is not copyrighted."
+* ^experimental = false
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * #contexts "Root concept for all context definitions"
 * #contexts ^property[+].code = #kind
 * #contexts ^property[=].valueCode = #internal
