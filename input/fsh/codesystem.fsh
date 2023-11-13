@@ -1,6 +1,6 @@
-CodeSystem: CapabilityFeaturesCS
-Id: capability-features-cs
-Title: "Capability Features"
+CodeSystem: CapabilityFeatureCS
+Id: capability-feature-cs
+Title: "Capability Feature CS"
 Description: "A feature that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
 * ^version = "4.0.1"
 * ^status = #active
@@ -117,9 +117,9 @@ Description: "A feature that may be declared in a capability statement. For disc
 
 
 
-CodeSystem: CapabilityFeatureValuesCS
+CodeSystem: CapabilityFeatureValueCS
 Id: capability-feature-value-cs
-Title: "Capability Feature Values"
+Title: "Capability Feature Value CS"
 Description: "A feature value that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
 * ^version = "4.0.1"
 * ^status = #active

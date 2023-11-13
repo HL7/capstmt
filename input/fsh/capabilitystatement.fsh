@@ -34,6 +34,6 @@ Usage: #example
 * format[+] = #xml
 * format[=] = #json
 
-* rest.extension[feature].extension[code].valueCodeableConcept = http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-features-cs#versioning
+* rest.extension[feature].extension[code].valueCodeableConcept = http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs#versioning
 * rest.extension[feature].extension[value].valueCodeableConcept = http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs#versioned
 * rest.mode = #server

@@ -1,6 +1,6 @@
 ValueSet: CapabilityFeatureVS
 Id: capability-feature-vs
-Title: "Capability Features"
+Title: "Capability Feature VS"
 Description: "A feature that may be declared in a capability statement"
 * ^meta.lastUpdated = "2021-12-19T08:15:41.873+11:00"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -15,14 +15,13 @@ Description: "A feature that may be declared in a capability statement"
 * ^experimental = true
 * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-features-cs
+* include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs
 
 
 
-ValueSet: CapabilityFeatureValue
+ValueSet: CapabilityFeatureValueVS
 Id: capability-feature-value-vs
-Title: "Capability Feature Values"
+Title: "Capability Feature Value VS"
 Description: "A vaule for a feature that may be declared in a capability statement"
 * ^meta.lastUpdated = "2021-12-19T08:15:41.873+11:00"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
@@ -37,5 +36,4 @@ Description: "A vaule for a feature that may be declared in a capability stateme
 * ^experimental = true
 * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs
