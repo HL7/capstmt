@@ -1,7 +1,6 @@
 /**************************************************************************************************************/
 Profile:        FeatureQueryInputParameters
 Parent:         Parameters
-Id:             feature-query-input-parameters
 Title:          "Feature Query Input Parameters"
 Description:    "The Parameters profile used to define the inputs of the [$feature-query](OperationDefinition-feature-query.html) operation."
 
@@ -27,7 +26,6 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 /**************************************************************************************************************/
 Profile:        FeatureQueryOutputParameters
 Parent:         Parameters
-Id:             feature-query-output-parameters
 Title:          "Feature Query Output Parameters"
 Description:    "The Parameters profile used to define the outputs of the [$feature-query](OperationDefinition-feature-query.html) operation."
 

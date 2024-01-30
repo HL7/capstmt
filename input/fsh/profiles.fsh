@@ -1,6 +1,7 @@
 
 Profile: FeatureCapabilityStatement
 Parent: CapabilityStatement
+Title: "Feature Capability Statement"
 Description: "A profile on the CapabilityStatement resource that allows for feature negotiation."
 * name 0..1 MS
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
