@@ -11,6 +11,17 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.name = "feature"
 * parameter.valueCodeableConcept 1..1 MS
 * parameter.valueCodeableConcept from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-vs (extensible)
+* parameter.part ^slicing.discriminator.type = #pattern
+* parameter.part ^slicing.discriminator.path = "name"
+* parameter.part ^slicing.rules = #open
+* parameter.part ^slicing.description = "Slice based on $this pattern"
+* parameter.part 1..1 MS
+* parameter.part contains 
+	  context 1..1 MS
+* parameter.part[context].name 1..1 MS
+* parameter.part[context].name = "context"
+* parameter.part[context].valueCode 1..1 MS
+* parameter.part[context].valueCode ^short = "A FHIRPath expression showing the context of the feature in the CapabilityStatement"
 
 
 /**************************************************************************************************************/
@@ -26,9 +37,22 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.name = "feature"
 * parameter.valueCodeableConcept 1..1 MS
 * parameter.valueCodeableConcept from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-vs (extensible)
-* parameter.part 0..1 MS
-* parameter.part.name 1..1 MS
-* parameter.part.name = "value"
-* parameter.part.value[x] 0..1 MS
-* parameter.part.value[x] only http://hl7.org/fhir/StructureDefinition/boolean or http://hl7.org/fhir/StructureDefinition/CodeableConcept
-* parameter.part.valueCodeableConcept from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-value-vs (extensible)
+* parameter.part ^slicing.discriminator.type = #pattern
+* parameter.part ^slicing.discriminator.path = "name"
+* parameter.part ^slicing.rules = #open
+* parameter.part ^slicing.description = "Slice based on $this pattern"
+* parameter.part 1..* MS
+* parameter.part contains 
+	  context 1..1 MS and 
+	  value 0..* MS
+* parameter.part[context].name 1..1 MS
+* parameter.part[context].name = "context"
+* parameter.part[context].valueCode 1..1 MS
+* parameter.part[context].valueCode ^short = "A FHIRPath expression showing the context of the feature in the CapabilityStatement"
+* parameter.part[value].name 1..1 MS
+* parameter.part[value].name = "value"
+* parameter.part[value].value[x] 1..1 MS
+* parameter.part[value].value[x] only 
+	boolean or 
+	CodeableConcept
+* parameter.part[value].valueCodeableConcept from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-value-vs (extensible)

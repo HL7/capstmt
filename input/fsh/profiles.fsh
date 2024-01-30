@@ -7,18 +7,14 @@ Description: "A profile on the CapabilityStatement resource that allows for feat
 * name 0..1 MS
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * rest.extension contains Feature named feature 0..* MS
-* rest.resource.versioning 0..0
-* rest.resource.readHistory 0..0
-* rest.resource.updateCreate 0..0
-* rest.resource.conditionalCreate 0..0
-* rest.resource.conditionalRead 0..0
-* rest.resource.conditionalUpdate	 0..0
-* rest.resource.conditionalDelete 0..0
-* rest.resource.referencePolicy 0..0
-* rest.resource.searchInclude 0..0
-* rest.resource.searchRevInclude 0..0
-* messaging 0..0
-* document 0..0
+* rest.security.extension contains Feature named feature 0..* MS
+* rest.resource.extension contains Feature named feature 0..* MS
+* rest.resource.interaction.extension contains Feature named feature 0..* MS
+* rest.resource.searchParam.extension contains Feature named feature 0..* MS
+* rest.resource.operation.extension contains Feature named feature 0..* MS
+* rest.interaction.extension contains Feature named feature 0..* MS
+* messaging.extension contains Feature named feature 0..* MS
+* document.extension contains Feature named feature 0..* MS
 
 Instance: CapabilityStatement2Example
 InstanceOf: CapabilityStatement2

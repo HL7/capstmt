@@ -6,7 +6,7 @@ Description: "This extension documents the features of a system using code/value
 * ^context[=].expression = "CapabilityStatement.rest"
 * extension contains
     code 1..1 MS and
-    value 1..1 MS
+    value 1..* MS
 * extension[code].value[x] 1..1
 * extension[code].value[x] only CodeableConcept
 * extension[code].value[x] from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-vs (extensible)
