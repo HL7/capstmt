@@ -3,7 +3,7 @@
 // SUSHI will look for definitions in any file using the .fsh ending.
 Profile: CapabilityStatement2
 Parent: CapabilityStatement
-Description: "An example profile of the CapabilityStatement resource."
+Description: "A profile on the CapabilityStatement resource that allows for feature negotiation."
 * name 0..1 MS
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * rest.extension contains Feature named feature 0..* MS

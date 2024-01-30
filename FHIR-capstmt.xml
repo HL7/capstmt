@@ -13,6 +13,8 @@
 <artifact id="CapabilityStatement/CapabilityStatement2Example" key="CapabilityStatement-CapabilityStatement2Example" name="CapabilityStatement2Example"/>
 <artifact id="StructureDefinition/feature" key="StructureDefinition-feature" name="Feature"/>
 <artifact id="OperationDefinition/feature-query" key="OperationDefinition-feature-query" name="Feature Query"/>
+<artifact id="StructureDefinition/feature-query-input-parameters" key="StructureDefinition-feature-query-input-parameters" name="Feature Query Input Parameters"/>
+<artifact id="StructureDefinition/feature-query-output-parameters" key="StructureDefinition-feature-query-output-parameters" name="Feature Query Output Parameters"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
