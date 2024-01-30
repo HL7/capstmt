@@ -9,12 +9,12 @@
 <artifact id="ValueSet/capability-feature-vs" key="ValueSet-capability-feature-vs" name="Capability Feature VS"/>
 <artifact id="CodeSystem/capability-feature-value-cs" key="CodeSystem-capability-feature-value-cs" name="Capability Feature Value CS"/>
 <artifact id="ValueSet/capability-feature-value-vs" key="ValueSet-capability-feature-value-vs" name="Capability Feature Value VS"/>
-<artifact id="StructureDefinition/CapabilityStatement2" key="StructureDefinition-CapabilityStatement2" name="CapabilityStatement2"/>
-<artifact id="CapabilityStatement/CapabilityStatement2Example" key="CapabilityStatement-CapabilityStatement2Example" name="CapabilityStatement2Example"/>
 <artifact id="StructureDefinition/feature" key="StructureDefinition-feature" name="Feature"/>
 <artifact id="OperationDefinition/feature-query" key="OperationDefinition-feature-query" name="Feature Query"/>
 <artifact id="StructureDefinition/feature-query-input-parameters" key="StructureDefinition-feature-query-input-parameters" name="Feature Query Input Parameters"/>
 <artifact id="StructureDefinition/feature-query-output-parameters" key="StructureDefinition-feature-query-output-parameters" name="Feature Query Output Parameters"/>
+<artifact id="StructureDefinition/FeatureCapabilityStatement" key="StructureDefinition-FeatureCapabilityStatement" name="FeatureCapabilityStatement"/>
+<artifact id="CapabilityStatement/FeatureCapabilityStatementExample" key="CapabilityStatement-FeatureCapabilityStatementExample" name="FeatureCapabilityStatementExample"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

@@ -1,7 +1,7 @@
 CodeSystem: CapabilityFeatureCS
 Id: capability-feature-cs
 Title: "Capability Feature CS"
-Description: "A feature that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
+Description: "A feature that may be declared in a capability statement."
 * ^version = "4.0.1"
 * ^status = #active
 * ^date = "2023-10-11"
@@ -120,7 +120,7 @@ Description: "A feature that may be declared in a capability statement. For disc
 CodeSystem: CapabilityFeatureValueCS
 Id: capability-feature-value-cs
 Title: "Capability Feature Value CS"
-Description: "A feature value that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
+Description: "A feature value that may be declared in a capability statement."
 * ^version = "4.0.1"
 * ^status = #active
 * ^date = "2023-10-11"
@@ -207,7 +207,7 @@ Description: "A feature value that may be declared in a capability statement. Fo
 CodeSystem: CapabilityContextCS
 Id: capability-context-cs
 Title: "Capability Context"
-Description: "A context that may be declared in a capability statement. For discussion, see [[[CapabilityStatement2]]] Notes"
+Description: "A context that may be declared in a capability statement."
 * ^version = "4.0.1"
 * ^status = #active
 * ^date = "2023-10-11"

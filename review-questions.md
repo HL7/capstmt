@@ -33,3 +33,4 @@ Consider adding a new operation: give me capability statements that support feat
 
 How do we express features in an IG, along with SHALLs, etc.? Do we have existing extensions to define conf verbs (https://www.hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)? How to render it with the publisher? Will need to rewrite the rendering of cap stmt (needs an update anyway). Maybe build verbs into the feature extension, but note that it only applies to requirements cap stmts. The extension moved to the extension pack: https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-capabilitystatement-expectation.html. Also look at the CapabilityStatement-prohibited extension for SHALL NOT (https://hl7.org/fhir/extensions/StructureDefinition-capabilitystatement-prohibited.html). May need to flag it as a modifier element. 
 
+Add documentation from here: https://hl7.org/fhir/5.0.0-snapshot1/capabilitystatement2.html#features
