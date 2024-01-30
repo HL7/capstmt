@@ -6,4 +6,5 @@ Orignal CapabilityStatement2 resource: https://hl7.org/fhir/5.0.0-snapshot1/capa
 - Should we include feature codes for the deprecated messaging and document paradigms?
 - Are these the actual codes we want defined in the IG for features and values? 
 - Are there examples of feature/value codes that we don't want in the IG but that we could provide as examples of user defined features?
+- Should the $feature-query operation allow pointing to a CapabilityStatement other than the one at /metadata?
 

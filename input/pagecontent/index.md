@@ -1,4 +1,4 @@
-# FHIR CapabilityStatement Implementation Guide
+# Overview
 
 CapabilityStatement is the largest/most complex of the infrastructure resources, yet there continues to be pressure to add yet more capabilities to describe additional nuances of how systems behave (or are desired to behave). 
 
