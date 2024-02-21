@@ -20,7 +20,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"
 * parameter.part[context].valueCode 1..1 MS
-* parameter.part[context].valueCode ^short = "A FHIRPath expression showing the context of the feature in the CapabilityStatement"
+* parameter.part[context].valueCode ^short = "An expression showing the context of the feature in the CapabilityStatement"
 
 
 /**************************************************************************************************************/
@@ -46,7 +46,7 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"
 * parameter.part[context].valueCode 1..1 MS
-* parameter.part[context].valueCode ^short = "A FHIRPath expression showing the context of the feature in the CapabilityStatement"
+* parameter.part[context].valueCode ^short = "An expression showing the context of the feature in the CapabilityStatement"
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
 * parameter.part[value].value[x] 1..1 MS
