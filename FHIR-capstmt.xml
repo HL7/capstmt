@@ -20,5 +20,6 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>
+<page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
 </specification>

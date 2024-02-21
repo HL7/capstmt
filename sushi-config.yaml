@@ -76,6 +76,7 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Specification: specification.html
   Artifacts: artifacts.html
   Downloads: downloads.html
 
