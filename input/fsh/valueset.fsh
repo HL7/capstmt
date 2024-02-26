@@ -16,6 +16,7 @@ Description: "A feature that may be declared in a capability statement"
 * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
 * include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs
+* include codes from system http://hl7.org/fhir/restful-interaction
 
 
 
