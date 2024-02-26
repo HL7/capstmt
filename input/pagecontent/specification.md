@@ -25,6 +25,8 @@ Features are identified by an expression that includes the scope in which the fe
 
 The full details of the expression format are described below.
 
+Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size, instead use the $feature-query operation to determine if the server supports needed features. 
+
 ##### Value for a Feature 
 Each feature has a value. The type of value depends on the feature, and is defined for the feature. Feature value are one of:
 
