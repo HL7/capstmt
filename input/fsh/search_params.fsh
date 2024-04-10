@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * date = "2024-04-10"
 * publisher = "HL7 International - FHIR Infrastructure Working Group"
-* description = "Select planned date of service"
+* description = "Search for a feature as represented by the Feature extension"
 * code = #feature
 * base = #CapabilityStatement
 * type = #special
