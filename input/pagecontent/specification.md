@@ -35,27 +35,63 @@ Each feature has a value. The type of value depends on the feature, and is defin
 - A code defined in some other code system in the FHIR specification
 - Todo: how do IGs work?
 
-The capability statement can include features either on the base of the statement, or on the elements inside the resource. Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement. For example, the following statements have the same meaning:
+The capability statement can include features either on the base of the statement, or on the elements inside the resource. Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement.
 
-TODO: Replace feature elements with extensions in snippets below. 
+Here is an example of a feature defined for all resources available via REST:
+
 
 		<CapabilityStatement2 xmlns="http://hl7.org/fhir">
 			<rest>
-				<feature>
-					<code value="resource:CodeSystem.searchInclude"/>
-					<value value="supplements"/>
-				</feature>
+				<extension
+						   url="http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/feature">
+				  <extension url="code">
+					<valueCodeableConcept>
+					  <coding>
+						<system
+								value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs"/>
+						<code value="versioning"/>
+					  </coding>
+					</valueCodeableConcept>
+				  </extension>
+				  <extension url="value">
+					<valueCodeableConcept>
+					  <coding>
+						<system
+								value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs"/>
+						<code value="versioned"/>
+					  </coding>
+					</valueCodeableConcept>
+				  </extension>
 			</rest>
 		</CapabilityStatement2>
+		
+		
+Here is the same feature only defined on CodeSystem:
   
 		<CapabilityStatement2 xmlns="http://hl7.org/fhir">
 			<rest>
 				<resource>
 					<type value="CodeSystem"/>
-					<feature>
-						<code value="searchInclude"/>
-						<value value="supplements"/>
-					</feature>
+						<extension
+								   url="http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/feature">
+						  <extension url="code">
+							<valueCodeableConcept>
+							  <coding>
+								<system
+										value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs"/>
+								<code value="versioning"/>
+							  </coding>
+							</valueCodeableConcept>
+						  </extension>
+						  <extension url="value">
+							<valueCodeableConcept>
+							  <coding>
+								<system
+										value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs"/>
+								<code value="versioned"/>
+							  </coding>
+							</valueCodeableConcept>
+						  </extension>
 				</resource>
 			</rest>
 		</CapabilityStatement2>
