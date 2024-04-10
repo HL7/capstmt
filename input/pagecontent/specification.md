@@ -62,6 +62,7 @@ Here is an example of a feature defined for all resources available via REST:
 					  </coding>
 					</valueCodeableConcept>
 				  </extension>
+				</extension>
 			</rest>
 		</CapabilityStatement2>
 		
@@ -72,26 +73,27 @@ Here is the same feature only defined on CodeSystem:
 			<rest>
 				<resource>
 					<type value="CodeSystem"/>
-						<extension
-								   url="http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/feature">
-						  <extension url="code">
-							<valueCodeableConcept>
-							  <coding>
-								<system
-										value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs"/>
-								<code value="versioning"/>
-							  </coding>
-							</valueCodeableConcept>
-						  </extension>
-						  <extension url="value">
-							<valueCodeableConcept>
-							  <coding>
-								<system
-										value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs"/>
-								<code value="versioned"/>
-							  </coding>
-							</valueCodeableConcept>
-						  </extension>
+					<extension
+							   url="http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/feature">
+					  <extension url="code">
+						<valueCodeableConcept>
+						  <coding>
+							<system
+									value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs"/>
+							<code value="versioning"/>
+						  </coding>
+						</valueCodeableConcept>
+					  </extension>
+					  <extension url="value">
+						<valueCodeableConcept>
+						  <coding>
+							<system
+									value="http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs"/>
+							<code value="versioned"/>
+						  </coding>
+						</valueCodeableConcept>
+					  </extension>
+					</extension>
 				</resource>
 			</rest>
 		</CapabilityStatement2>
