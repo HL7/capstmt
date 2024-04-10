@@ -40,7 +40,7 @@ The capability statement can include features either on the base of the statemen
 Here is an example of a feature defined for all resources available via REST:
 
 
-		<CapabilityStatement2 xmlns="http://hl7.org/fhir">
+		<CapabilityStatement xmlns="http://hl7.org/fhir">
 			<rest>
 				<extension
 						   url="http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/feature">
@@ -64,12 +64,12 @@ Here is an example of a feature defined for all resources available via REST:
 				  </extension>
 				</extension>
 			</rest>
-		</CapabilityStatement2>
+		</CapabilityStatement>
 		
 		
 Here is the same feature only defined on CodeSystem:
   
-		<CapabilityStatement2 xmlns="http://hl7.org/fhir">
+		<CapabilityStatement xmlns="http://hl7.org/fhir">
 			<rest>
 				<resource>
 					<type value="CodeSystem"/>
@@ -96,10 +96,10 @@ Here is the same feature only defined on CodeSystem:
 					</extension>
 				</resource>
 			</rest>
-		</CapabilityStatement2>
+		</CapabilityStatement>
 		
 
-Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the CapabilityStatement2 resource. Feature contexts are defined for features that are deeper into the system than those defined by the CapabilityStatement2 resource.
+Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the FeatureCapabilityStatement profile. Feature contexts are defined for features that are deeper into the system than those defined by the FeatureCapabilityStatement profile.
 
 #### Asking for features in a CapabilityStatement 
 
