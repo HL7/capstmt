@@ -15,6 +15,7 @@
 <artifact id="StructureDefinition/FeatureQueryInputParameters" key="StructureDefinition-FeatureQueryInputParameters" name="Feature Query Input Parameters"/>
 <artifact id="StructureDefinition/FeatureQueryOutputParameters" key="StructureDefinition-FeatureQueryOutputParameters" name="Feature Query Output Parameters"/>
 <artifact id="CapabilityStatement/FeatureCapabilityStatementExample" key="CapabilityStatement-FeatureCapabilityStatementExample" name="FeatureCapabilityStatementExample"/>
+<artifact id="SearchParameter/feature" key="SearchParameter-feature" name="feature"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
