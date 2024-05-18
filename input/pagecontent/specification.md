@@ -103,7 +103,9 @@ Note, however, that the feature scopes are not restricted to the contexts implie
 
 #### Asking for features in a CapabilityStatement 
 
-By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default.
+By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
+
+##### Feature Parameter
 
 Clients can request that a server by using the feature parameter, which represents a query for information about a particular feature:
 
@@ -115,6 +117,10 @@ Other examples of query mode usage:
 
 - searchInclude - return all the searchInclude statements for all contexts
 - rest.operation:validate-code.compositional - return, for all supported code systems, whether compositional grammar is supported. Note that a server would not be expected to return a feature for every code system, only where it has something to say (e.g. code systems that are compositional)
+
+##### Feature Query operation
+
+TBD
 
 #### Feature Negotiation
 
@@ -129,7 +135,7 @@ TODO: provide example of calling the operation with a Parameters resource
 Alternatively, a client can include a feature assertion on an HTTP header:
 
 		GET [base]/AdverseEvent/23/_history/45
-		Required-Feature: rest:server.resource:AdverseEvent.readHistory;true
+		X-Required-Feature: rest:server.resource:AdverseEvent.readHistory;true
 
 The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for AdverseEvent.
 

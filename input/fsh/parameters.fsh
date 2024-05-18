@@ -30,7 +30,7 @@ Title:          "Feature Query Output Parameters"
 Description:    "The Parameters profile used to define the outputs of the [$feature-query](OperationDefinition-feature-query.html) operation."
 
 * ^status = #active
-* parameter 1..* MS
+* parameter 0..* MS
 * parameter.name 1..1 MS
 * parameter.name = "feature"
 * parameter.valueCodeableConcept 1..1 MS
