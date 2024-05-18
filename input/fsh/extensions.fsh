@@ -11,5 +11,5 @@ Description: "This extension documents the features of a system using code/value
 * extension[code].value[x] only CodeableConcept
 * extension[code].value[x] from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-vs (extensible)
 * extension[value].value[x] 1..1
-* extension[value].value[x] only CodeableConcept
-* extension[value].value[x] from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-value-vs (extensible)
+* extension[value].value[x] only CodeableConcept or string or boolean
+* extension[value].valueCodeableConcept from http://www.hl7.org/fhir/uv/capstmt/ValueSet/capability-feature-value-vs (extensible)
