@@ -135,7 +135,7 @@ TODO: provide example of calling the operation with a Parameters resource
 Alternatively, a client can include a feature assertion on an HTTP header:
 
 		GET [base]/AdverseEvent/23/_history/45
-		X-Required-Feature: rest:server.resource:AdverseEvent.readHistory;true
+		Required-Features: rest:server.resource:AdverseEvent.readHistory;true
 
 The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for AdverseEvent.
 
