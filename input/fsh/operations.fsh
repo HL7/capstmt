@@ -12,8 +12,7 @@ Usage: #definition
 * description = "This operation allows clients to query for features supported by a server."
 * code = #feature-query
 * base = "https://hl7.org/fhir/uv/capstmt/OperationDefinition/feature-query"
-* resource = #CapabilityStatement
-* system = false
+* system = true
 * type = true
 * instance = false
 
@@ -29,5 +28,5 @@ Usage: #definition
 * parameter[1].use = #out
 * parameter[1].min = 0
 * parameter[1].max = "1"
-* parameter[1].documentation = "Any value(s) associated with the queried feature"
+* parameter[1].documentation = "The answer to or any values associated with the queried feature"
 * parameter[1].type = #Parameters

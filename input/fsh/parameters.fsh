@@ -16,7 +16,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part contains 
 	  name 1..1 MS and
 	  context 0..1 MS and
-	  value 0..* MS
+	  value 0..1 MS
 	  
 * parameter.part[name].name 1..1 MS
 * parameter.part[name].name = "name"
@@ -31,7 +31,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
 * parameter.part[value].value[x] 1..1 MS
-* parameter.part[value].value[x] ^short = "The expected value of the feature"
+* parameter.part[value].value[x] ^short = "The expected value of the feature. To query for multiple values, supply multiple parameter elements."
 
 
 /**************************************************************************************************************/
@@ -42,6 +42,8 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 
 * ^status = #active
 * parameter 0..* MS
+
+* parameter ^short = "One repetition of the parameter element per parameter element in the input Parameters resource"
 * parameter.name 1..1 MS
 * parameter.name = "feature"
 * parameter.part ^slicing.discriminator.type = #pattern
@@ -73,4 +75,4 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[answer].name 1..1 MS
 * parameter.part[answer].name = "answer"
 * parameter.part[answer].valueBoolean 1..1 MS
-* parameter.part[answer].valueBoolean ^short = "If a value is provided in the input parameters, indicates if the feature is present with the expected value(s)"
+* parameter.part[answer].valueBoolean ^short = "If a value is provided in the input parameters, indicates if the feature is present with the expected value"
