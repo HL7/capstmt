@@ -15,7 +15,10 @@
 <artifact id="StructureDefinition/FeatureQueryInputParameters" key="StructureDefinition-FeatureQueryInputParameters" name="Feature Query Input Parameters"/>
 <artifact id="StructureDefinition/FeatureQueryOutputParameters" key="StructureDefinition-FeatureQueryOutputParameters" name="Feature Query Output Parameters"/>
 <artifact id="CapabilityStatement/FeatureCapabilityStatementExample" key="CapabilityStatement-FeatureCapabilityStatementExample" name="FeatureCapabilityStatementExample"/>
-<artifact id="SearchParameter/feature" key="SearchParameter-feature" name="feature"/>
+<artifact id="Parameters/FeatureQueryInputParametersExample" key="Parameters-FeatureQueryInputParametersExample" name="FeatureQueryInputParametersExample"/>
+<artifact id="Parameters/FeatureQueryOutputParametersExample" key="Parameters-FeatureQueryOutputParametersExample" name="FeatureQueryOutputParametersExample"/>
+<artifact id="CodeSystem/processing-status-vs" key="CodeSystem-processing-status-vs" name="Processing Status Code System"/>
+<artifact id="ValueSet/processing-status-vs" key="ValueSet-processing-status-vs" name="Processing Status Value VS"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

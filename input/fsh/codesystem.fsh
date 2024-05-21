@@ -268,3 +268,16 @@ Description: "A context that may be declared in a capability statement."
 * #contexts #compartment ^property[=].valueCode = #compartment.code
 * #contexts #compartment ^property[+].code = #scope
 * #contexts #compartment ^property[=].valueCode = #rest
+
+
+CodeSystem: ProcessingStatusCS
+Id: processing-status-vs
+Title: "Processing Status Code System"
+Description: "CodeSystem for feature-query processing status"
+* ^caseSensitive = true
+* #all-ok "All OK"
+* #unknown "Unknown"
+* #feature "Feature"
+* #context "Context"
+* ^copyright = "This CodeSystem is not copyrighted."
+* ^experimental = false
