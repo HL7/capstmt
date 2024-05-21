@@ -17,11 +17,10 @@ Features may be declared in a capability statement using the Capability Features
 
 Features are identified by an expression that includes the scope in which the feature is being asserted. Here's some examples:
 
-- rest:server.resource:*.updateCreate = true - the server supports updateCreate on the update interaction for all resources
-- rest:server.resource:CodeSystem.searchInclude = supplements - the server supports _include=CodeSystem.supplements
-- rest:server.security.cors = false - the server doesn't support CORS
-- rest:client.security.cors = true - the client requires a server that supports CORS
-- rest:operation:validate-code.Codesystem:'http://snomed.info/sct'.compositional = true - the server can validate post-coordinated SNOMED codes
+* feature-query?param=updateCreate(true) - the server supports updateCreate on the update interaction for all resources
+* feature-query?param=searchInclude@CodeSystem(supplements) - the server supports _include=CodeSystem.supplements
+* feature-query?param=security.cors(false) - the server doesn't support CORS
+* feature-query?param=security.cors(true) - the client requires a server that supports CORS
 
 The full details of the expression format are described below.
 
@@ -120,7 +119,7 @@ Responses
 
 By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
 
-##### Feature Parameter
+##### Features Parameter in GET requests
 
 Clients can request that a server by using the feature parameter, which represents a query for information about a particular feature:
 
@@ -130,12 +129,13 @@ For example, here is how you would ask if the Patient resource has read access:
 
 		GET [base]/feature-query?param=read@Patient(true)
 
-Other examples of query mode usage:
+Requesting multiple features:
 
+		GET [base]/feature-query?param=read@Patient(true)&param=update@Patient(true)
 
-##### Feature Query operation
+##### Feature Query Operation
 
-TBD
+TBD: add example in/out params and explain invoking them in a POST
 
 #### Feature Negotiation
 
