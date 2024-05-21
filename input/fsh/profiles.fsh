@@ -17,7 +17,7 @@ Description: "A profile on the CapabilityStatement resource that allows for feat
 
 Instance: FeatureCapabilityStatementExample
 InstanceOf: FeatureCapabilityStatement
-Description: "An example of a CapabilityStatement with a license to krill."
+Description: "An example of a CapabilityStatement with feature extensions"
 Usage: #example
 * name = "FeatureCapabilityStatementExample"
 * status = #draft
