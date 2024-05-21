@@ -22,7 +22,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[name].name = "name"
 * parameter.part[name].value[x] 1..1 MS
 * parameter.part[name].value[x] only uri
-* parameter.part[name].value[x] ^short = "The name of the feature"
+* parameter.part[name].value[x] ^short = "The name of the feature. If not a core FHIR feature, must be a fully qualified URI"
 
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"
@@ -74,7 +74,7 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[name].name = "name"
 * parameter.part[name].value[x] 1..1 MS
 * parameter.part[name].value[x] only uri
-* parameter.part[name].value[x] ^short = "The name of the feature"
+* parameter.part[name].value[x] ^short = "The name of the feature. If not a core FHIR feature, must be a fully qualified URI"
 
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"

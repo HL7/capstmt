@@ -27,18 +27,11 @@ The full details of the expression format are described below.
 
 Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size, instead use the $feature-query operation to determine if the server supports needed features. 
 
-##### Value for a Feature 
-Each feature has a value. The type of value depends on the feature, and is defined for the feature. Feature value are one of:
+##### Representing Features in a CapabilityStatement
 
-- a boolean value - true or false
-- A code defined in the Capability Features code system
-- A code defined in some other code system in the FHIR specification
-- Todo: how do IGs work?
-
-The capability statement can include features either on the base of the statement, or on the elements inside the resource. Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement.
+The CapabilityStatement can include features either on the base of the statement, or on the elements inside the resource. Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement.
 
 Here is an example of a feature defined for all resources available via REST:
-
 
 		<CapabilityStatement xmlns="http://hl7.org/fhir">
 			<rest>
@@ -102,6 +95,28 @@ Here is the same feature only defined on CodeSystem:
 Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the FeatureCapabilityStatement profile. Feature contexts are defined for features that are deeper into the system than those defined by the FeatureCapabilityStatement profile.
 
 #### Asking for features in a CapabilityStatement 
+
+General Patterns
+
+* feature alone: returns list of values on the server (can refuse - see processing-status)
+* feature + context: returns list of values in that context on the server
+* feature + value: returns answer of true/false if all contexts match the supplied value
+* feature + context + value: returns answer of true/false if the supplied context matches the supplied value
+
+Responses
+
+* feature: 'feature' literal (one repetition per request feature param)
+* name: name of the feature (uri)
+* context: present if provided, used to match responses to requests (uri)
+* processing-status: code from the server about processing the request (e.g., all-ok, not-supported, etc.)
+* value:
+  * if provided in input: the value requested (datatype as defined by the feature) (even if processing fails)
+  * if not provided: the value of the feature (can have multiple repetitions) (uses datatype of feature)
+* answer:
+  * only present if processing was successful (all-ok)
+  * if a value is provided, does the supplied value match the server feature-supported value
+  * if a value is not provided, does not exist
+
 
 By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
 
