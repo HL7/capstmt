@@ -279,5 +279,6 @@ Description: "CodeSystem for feature-query processing status"
 * #unknown "Unknown"
 * #feature "Feature"
 * #context "Context"
+* #unauthorized "Unauthorized"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false

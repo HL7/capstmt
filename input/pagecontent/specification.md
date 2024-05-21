@@ -109,14 +109,14 @@ By default, when a client asks a server for it's capability statement using /met
 
 Clients can request that a server by using the feature parameter, which represents a query for information about a particular feature:
 
-		GET [base]/metadata?feature=resource:CodeSystem
+		GET [base]/feature-query?feature[@context](value)
 
-This is a request for all features that pertain to how the CodeSystem resource is implemented. A client can repeat the feature parameter any number of times.
+For example, here is how you would ask if the Patient resource has read access:
+
+		GET [base]/feature-query?param=read@Patient(true)
 
 Other examples of query mode usage:
 
-- searchInclude - return all the searchInclude statements for all contexts
-- rest.operation:validate-code.compositional - return, for all supported code systems, whether compositional grammar is supported. Note that a server would not be expected to return a feature for every code system, only where it has something to say (e.g. code systems that are compositional)
 
 ##### Feature Query operation
 
@@ -134,23 +134,10 @@ TODO: provide example of calling the operation with a Parameters resource
 
 Alternatively, a client can include a feature assertion on an HTTP header:
 
-		GET [base]/AdverseEvent/23/_history/45
-		Required-Features: rest:server.resource:AdverseEvent.readHistory;true
+		GET [base]/Patient/23/_history/45
+		Required-Features: param=read@Patient(true)
 
 The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for AdverseEvent.
 
 Clients can only expect a server to check these headers if the server declares that it does using the feature rest:server.feature-header = true.
 
-##### Formal Definition
-
-The code system underlying the Capability Features defines 4 kinds of concepts:
-
-feature: a feature that a system can report about (whether it is needed or provided)
-value: a possible value for a feature. Each feature has a property that defines the root
-context: a concept that specifies a scope in which the feature statement applies
-internal: an internal grouping code that isn't used in expressions or values
-Each feature expression has the syntax
-
-		(context[:value].)*feature
-
-where context is a code taken from the list below. Contexts SHALL be in the correct order, as defined in the subcontext property.
