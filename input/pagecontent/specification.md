@@ -126,10 +126,6 @@ TBD
 
 In addition to querying for a capability statement, clients can do negotation. There are 2 different approaches that are supported: an operation, and an HTTP header.
 
-##### Operation 
-
-TODO: provide example of calling the operation with a Parameters resource
-
 ##### HTTP Header
 
 Alternatively, a client can include a feature assertion on an HTTP header:
