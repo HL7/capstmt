@@ -204,74 +204,8 @@ Description: "A feature value that may be declared in a capability statement."
 * #values #reference-handling-policy #local ^property[=].valueCode = #value
 
 
-CodeSystem: CapabilityContextCS
-Id: capability-context-cs
-Title: "Capability Context"
-Description: "A context that may be declared in a capability statement."
-* ^version = "4.0.1"
-* ^status = #active
-* ^date = "2023-10-11"
-* ^publisher = "HL7 (FHIR Project)"
-* ^caseSensitive = true
-* ^hierarchyMeaning = #is-a
-* ^compositional = true
-* ^content = #complete
-* ^copyright = "This CodeSystem is not copyrighted."
-* ^experimental = false
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* #contexts "Root concept for all context definitions"
-* #contexts ^property[+].code = #kind
-* #contexts ^property[=].valueCode = #internal
-* #contexts #rest "The REST API as a whole"
-* #contexts #rest ^property[+].code = #kind
-* #contexts #rest ^property[=].valueCode = #context
-* #contexts #rest ^property[+].code = #qualification
-* #contexts #rest ^property[=].valueCode = #server|client
-* #contexts #resource "Support for a resource on the REST API"
-* #contexts #resource ^property[0].code = #kind
-* #contexts #resource ^property[=].valueCode = #context
-* #contexts #resource ^property[+].code = #qualification
-* #contexts #resource ^property[=].valueCode = #"resource type"
-* #contexts #resource ^property[+].code = #scope
-* #contexts #resource ^property[=].valueCode = #rest
-* #contexts #interaction "Support for a interaction (not on a resource) on the REST API"
-* #contexts #interaction ^property[0].code = #kind
-* #contexts #interaction ^property[=].valueCode = #context
-* #contexts #interaction ^property[+].code = #qualification
-* #contexts #interaction ^property[=].valueCode = #interaction.code
-* #contexts #interaction ^property[+].code = #scope
-* #contexts #interaction ^property[=].valueCode = #rest
-* #contexts #interaction ^property[+].code = #scope
-* #contexts #interaction ^property[=].valueCode = #resource
-* #contexts #searchParam "Support for a search parameter across resources on the REST API"
-* #contexts #searchParam ^property[0].code = #kind
-* #contexts #searchParam ^property[=].valueCode = #context
-* #contexts #searchParam ^property[+].code = #qualification
-* #contexts #searchParam ^property[=].valueCode = #searchparam.code
-* #contexts #searchParam ^property[+].code = #scope
-* #contexts #searchParam ^property[=].valueCode = #rest
-* #contexts #searchParam ^property[+].code = #scope
-* #contexts #searchParam ^property[=].valueCode = #resource
-* #contexts #operation "Support for a operation not on a resource on the REST API"
-* #contexts #operation ^property[0].code = #kind
-* #contexts #operation ^property[=].valueCode = #context
-* #contexts #operation ^property[+].code = #qualification
-* #contexts #operation ^property[=].valueCode = #operation.name
-* #contexts #operation ^property[+].code = #scope
-* #contexts #operation ^property[=].valueCode = #rest
-* #contexts #operation ^property[+].code = #scope
-* #contexts #operation ^property[=].valueCode = #resource
-* #contexts #compartment "Support for a compartment on the REST API"
-* #contexts #compartment ^property[0].code = #kind
-* #contexts #compartment ^property[=].valueCode = #context
-* #contexts #compartment ^property[+].code = #qualification
-* #contexts #compartment ^property[=].valueCode = #compartment.code
-* #contexts #compartment ^property[+].code = #scope
-* #contexts #compartment ^property[=].valueCode = #rest
-
-
 CodeSystem: ProcessingStatusCS
-Id: processing-status-vs
+Id: processing-status-cs
 Title: "Processing Status Code System"
 Description: "CodeSystem for feature-query processing status"
 * ^caseSensitive = true

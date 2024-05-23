@@ -89,7 +89,6 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[value].value[x] only boolean or canonical or code or date or dateTime or decimal or id or instant or integer or markdown or oid or string or positiveInt or time or unsignedInt or uri or url or uuid or Coding or CodeableConcept
 * parameter.part[value].value[x] ^short = "The expected value of the feature"
 
-
 * parameter.part[matches].name 1..1 MS
 * parameter.part[matches].name = "answer"
 * parameter.part[matches].value[x] 1..1 MS

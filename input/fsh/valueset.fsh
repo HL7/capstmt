@@ -40,7 +40,7 @@ Description: "A vaule for a feature that may be declared in a capability stateme
 * include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs
 
 
-ValueSet: ProcessingStatus
+ValueSet: ProcessingStatusVS
 Id: processing-status-vs
 Title: "Processing Status Value VS"
 Description: "A vaule for a feature that may be declared in a capability statement"
