@@ -33,6 +33,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
 * parameter.part[value].value[x] 1..1 MS
+* parameter.part[value].value[x] only boolean or canonical or code or date or dateTime or decimal or id or instant or integer or markdown or oid or string or positiveInt or time or unsignedInt or uri or url or uuid or Coding or CodeableConcept
 * parameter.part[value].value[x] ^short = "The expected value of the feature. To query for multiple values, supply multiple parameter elements."
 
 
@@ -67,7 +68,7 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 	  name 1..1 MS and
 	  context 0..1 MS and
 	  value 0..1 MS and
-	  answer 0..1 MS and
+	  matches 0..1 MS and
 	  processing-status 0..1 MS
 	  
 * parameter.part[name].name 1..1 MS
@@ -85,14 +86,15 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
 * parameter.part[value].value[x] 1..1 MS
+* parameter.part[value].value[x] only boolean or canonical or code or date or dateTime or decimal or id or instant or integer or markdown or oid or string or positiveInt or time or unsignedInt or uri or url or uuid or Coding or CodeableConcept
 * parameter.part[value].value[x] ^short = "The expected value of the feature"
 
 
-* parameter.part[answer].name 1..1 MS
-* parameter.part[answer].name = "answer"
-* parameter.part[answer].value[x] 1..1 MS
-* parameter.part[answer].value[x] only boolean
-* parameter.part[answer].value[x] ^short = "The result of the feature query if value was specified in the input parameter"
+* parameter.part[matches].name 1..1 MS
+* parameter.part[matches].name = "answer"
+* parameter.part[matches].value[x] 1..1 MS
+* parameter.part[matches].value[x] only boolean
+* parameter.part[matches].value[x] ^short = "The result of the feature query if value was specified in the input parameter"
 
 * parameter.part[processing-status].name 1..1 MS
 * parameter.part[processing-status].name = "processing-status"
@@ -114,7 +116,7 @@ Usage: #example
 * parameter.part[name].valueUri = "versioning"
 * parameter.part[value].name = "value"
 * parameter.part[value].valueUri = "versioned"
-* parameter.part[answer].name = "answer"
-* parameter.part[answer].valueBoolean = true
+* parameter.part[matches].name = "answer"
+* parameter.part[matches].valueBoolean = true
 * parameter.part[processing-status].name = "processing-status"
 * parameter.part[processing-status].valueCode = #all-ok
