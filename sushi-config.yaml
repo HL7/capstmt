@@ -3,10 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.capstmt
-canonical: http://www.hl7.org/fhir/uv/capstmt
-name: CapabilityStatementIG
-title: FHIR CapabilityStatement Implementation Guide
+id: hl7.fhir.uv.application-feature 
+canonical: http://www.hl7.org/fhir/uv/application-feature 
+name: ApplicationFeatureFramework
+title: FHIR Application Feature Framework Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -79,6 +79,7 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Table of Contents: toc.html
   Specification: specification.html
   Artifacts: artifacts.html
   Downloads: downloads.html

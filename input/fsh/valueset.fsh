@@ -15,7 +15,7 @@ Description: "A feature that may be declared in a capability statement"
 * ^experimental = false
 // * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
-* include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs
+* include codes from system http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs
 * include codes from system http://hl7.org/fhir/restful-interaction
 
 
@@ -37,7 +37,7 @@ Description: "A vaule for a feature that may be declared in a capability stateme
 * ^experimental = false
 // * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
-* include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs
+* include codes from system http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs
 
 
 ValueSet: ProcessingStatusVS
@@ -57,4 +57,4 @@ Description: "A vaule for a feature that may be declared in a capability stateme
 * ^experimental = true
 * ^date = "2020-09-21"
 * ^publisher = "HL7 (FHIR Project)"
-* include codes from system http://www.hl7.org/fhir/uv/capstmt/CodeSystem/processing-status-cs
+* include codes from system http://www.hl7.org/fhir/uv/application-feature/CodeSystem/processing-status-cs

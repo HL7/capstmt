@@ -28,6 +28,6 @@ Usage: #example
 * fhirVersion = #4.0.1
 * format[+] = #xml
 * format[=] = #json
-* rest.extension[feature].extension[code].valueCodeableConcept = http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-cs#versioning
-* rest.extension[feature].extension[value].valueCodeableConcept = http://www.hl7.org/fhir/uv/capstmt/CodeSystem/capability-feature-value-cs#versioned
+* rest.extension[feature].extension[code].valueCodeableConcept = http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs#versioning
+* rest.extension[feature].extension[value].valueCodeableConcept = http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs#versioned
 * rest.mode = #server

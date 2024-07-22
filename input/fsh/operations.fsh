@@ -4,20 +4,20 @@ Description: "This operation allows clients to query for features supported by a
 Usage: #definition
 
 * id = "feature-query"
-* url = "http://www.hl7.org/fhir/uv/capstmt/OperationDefinition/feature-query"
+* url = "http://www.hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
 * name = "FeatureQuery"
 * title = "Feature Query"
 * status = #active
 * kind = #operation
 * description = "This operation allows clients to query for features supported by a server."
 * code = #feature-query
-* base = "https://hl7.org/fhir/uv/capstmt/OperationDefinition/feature-query"
+* base = "https://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
 * system = true
 * type = true
 * instance = false
 
-* inputProfile = "http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/FeatureQueryInputParameters"
-* outputProfile = "http://www.hl7.org/fhir/uv/capstmt/StructureDefinition/FeatureQueryOutputParameters"
+* inputProfile = "http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"
+* outputProfile = "http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"
 * parameter[0].name = #feature
 * parameter[0].use = #in
 * parameter[0].min = 1

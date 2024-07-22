@@ -43,9 +43,10 @@ Description: "An example input parameter"
 Usage: #example
 * parameter.name = "feature"
 * parameter.part[name].name = "name"
-* parameter.part[name].valueUri = "versioning"
+* parameter.part[name].valueUri = #versioning
 * parameter.part[value].name = "value"
-* parameter.part[value].valueUri = "versioned"
+* parameter.part[value].valueUri = #versioned
+
 
 /**************************************************************************************************************/
 Profile:        FeatureQueryOutputParameters
@@ -55,14 +56,12 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 
 * ^status = #active
 * parameter 0..* MS
-
 * parameter ^short = "One repetition of the parameter element per parameter element in the input Parameters resource"
 * parameter.name 1..1 MS
 * parameter.name = "feature"
-* parameter.part ^slicing.discriminator.type = #pattern
+* parameter.part ^slicing.discriminator.type = #value
 * parameter.part ^slicing.discriminator.path = "name"
 * parameter.part ^slicing.rules = #open
-* parameter.part ^slicing.description = "Slice based on $this pattern"
 * parameter.part 1..* MS
 * parameter.part contains 
 	  name 1..1 MS and
@@ -99,10 +98,8 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[processing-status].name = "processing-status"
 * parameter.part[processing-status].value[x] 1..1 MS
 * parameter.part[processing-status].value[x] only code
-* parameter.part[processing-status].value[x] from http://www.hl7.org/fhir/uv/capstmt/ValueSet/processing-status-vs (required)
+* parameter.part[processing-status].value[x] from http://www.hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs (required)
 * parameter.part[processing-status].value[x] ^short = "Indicates the processing status of the feature-query operation (all-ok, etc.)"
-
-
 
 
 
@@ -112,9 +109,9 @@ Description: "An example input parameter"
 Usage: #example
 * parameter.name = "feature"
 * parameter.part[name].name = "name"
-* parameter.part[name].valueUri = "versioning"
+* parameter.part[name].valueUri = #versioning
 * parameter.part[value].name = "value"
-* parameter.part[value].valueUri = "versioned"
+* parameter.part[value].valueUri = #versioned
 * parameter.part[matches].name = "answer"
 * parameter.part[matches].valueBoolean = true
 * parameter.part[processing-status].name = "processing-status"

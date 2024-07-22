@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="fhir-i" url="http://www.hl7.org/fhir/uv/capstmt">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="fhir-i" url="http://www.hl7.org/fhir/uv/application-feature">
 <version code="current" url=""/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="CodeSystem/capability-context-cs" key="CodeSystem-capability-context-cs" name="Capability Context"/>
 <artifact id="CodeSystem/capability-feature-cs" key="CodeSystem-capability-feature-cs" name="Capability Feature CS"/>
 <artifact id="ValueSet/capability-feature-vs" key="ValueSet-capability-feature-vs" name="Capability Feature VS"/>
 <artifact id="CodeSystem/capability-feature-value-cs" key="CodeSystem-capability-feature-value-cs" name="Capability Feature Value CS"/>
@@ -17,7 +16,7 @@
 <artifact id="CapabilityStatement/FeatureCapabilityStatementExample" key="CapabilityStatement-FeatureCapabilityStatementExample" name="FeatureCapabilityStatementExample"/>
 <artifact id="Parameters/FeatureQueryInputParametersExample" key="Parameters-FeatureQueryInputParametersExample" name="FeatureQueryInputParametersExample"/>
 <artifact id="Parameters/FeatureQueryOutputParametersExample" key="Parameters-FeatureQueryOutputParametersExample" name="FeatureQueryOutputParametersExample"/>
-<artifact id="CodeSystem/processing-status-vs" key="CodeSystem-processing-status-vs" name="Processing Status Code System"/>
+<artifact id="CodeSystem/processing-status-cs" key="CodeSystem-processing-status-cs" name="Processing Status Code System"/>
 <artifact id="ValueSet/processing-status-vs" key="ValueSet-processing-status-vs" name="Processing Status Value VS"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
