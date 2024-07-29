@@ -98,10 +98,8 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[processing-status].name = "processing-status"
 * parameter.part[processing-status].value[x] 1..1 MS
 * parameter.part[processing-status].value[x] only code
-* parameter.part[processing-status].value[x] from http://www.hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs (required)
+* parameter.part[processing-status].value[x] from http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs (required)
 * parameter.part[processing-status].value[x] ^short = "Indicates the processing status of the feature-query operation (all-ok, etc.)"
-
-
 
 Instance: FeatureQueryOutputParametersExample
 InstanceOf: FeatureQueryOutputParameters
