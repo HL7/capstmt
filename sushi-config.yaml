@@ -19,7 +19,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: fhir
 publisher:
-  name: HL7 FHIR Infrastructure Working Group
+  name: HL7 International / FHIR Infrastructure
   url: https://www.hl7.org/Special/committees/fiwg
   # email: test@example.org
 
