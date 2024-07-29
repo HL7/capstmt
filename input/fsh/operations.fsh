@@ -4,7 +4,7 @@ Description: "This operation allows clients to query for features supported by a
 Usage: #definition
 
 * id = "feature-query"
-* url = "http://www.hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
+// * url = "http://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
 * name = "FeatureQuery"
 * title = "Feature Query"
 * status = #active
