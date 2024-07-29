@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.application-feature 
-canonical: http://www.hl7.org/fhir/uv/application-feature 
+canonical: http://hl7.org/fhir/uv/application-feature 
 name: ApplicationFeatureFramework
 title: FHIR Application Feature Framework Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
