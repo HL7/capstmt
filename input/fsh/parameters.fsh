@@ -9,7 +9,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.name 1..1 MS
 * parameter.name = "feature"
 * parameter.part ^slicing.discriminator.type = #pattern
-* parameter.part ^slicing.discriminator.path = "name"
+* parameter.part ^slicing.discriminator.path = "$this.name"
 * parameter.part ^slicing.rules = #open
 * parameter.part ^slicing.description = "Slice based on $this pattern"
 * parameter.part 1..* MS
@@ -41,11 +41,11 @@ Instance: FeatureQueryInputParametersExample
 InstanceOf: FeatureQueryInputParameters
 Description: "An example input parameter"
 Usage: #example
-* parameter.name = "feature"
-* parameter.part[name].name = "name"
-* parameter.part[name].valueUri = #versioning
-* parameter.part[value].name = "value"
-* parameter.part[value].valueUri = #versioned
+* parameter[+].name = "feature"
+* parameter[=].part[name].name = "name"
+* parameter[=].part[name].valueUri = #versioning
+* parameter[=].part[value].name = "value"
+* parameter[=].part[value].valueUri = #versioned
 
 
 /**************************************************************************************************************/
@@ -60,7 +60,7 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.name 1..1 MS
 * parameter.name = "feature"
 * parameter.part ^slicing.discriminator.type = #value
-* parameter.part ^slicing.discriminator.path = "name"
+* parameter.part ^slicing.discriminator.path = "$this.name"
 * parameter.part ^slicing.rules = #open
 * parameter.part 1..* MS
 * parameter.part contains 
