@@ -11,17 +11,14 @@ WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.sna
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
 INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-== fsh-generated\resources\CodeSystem-capability-feature-cs.json ==
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
 INFORMATION: CodeSystem/capability-feature-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-== fsh-generated\resources\CodeSystem-capability-feature-value-cs.json ==
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
 INFORMATION: CodeSystem/capability-feature-value-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-== fsh-generated\resources\CodeSystem-processing-status-cs.json ==
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
@@ -51,21 +48,6 @@ ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].pa
 
 ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[1].name: Value is 'value' but must be 'feature'
 == fsh-generated\resources\Parameters-FeatureQueryOutputParametersExample.json ==
-
-# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
-
-
-# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
-
-
-# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
-
-
-# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
-
-
-# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
-
 
 # Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
 
