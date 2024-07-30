@@ -1,2 +1,92 @@
 == Suppressed Messages ==
 
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[0]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[0]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[0].name: Value is 'name' but must be 'feature'
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[1]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[1]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryInputParametersExample: Parameters.parameter[0].part[1].name: Value is 'value' but must be 'feature'
+== fsh-generated\resources\Parameters-FeatureQueryOutputParametersExample.json ==
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[0]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[0]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[0].name: Value is 'name' but must be 'feature'
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[1]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[1]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[1].name: Value is 'value' but must be 'feature'
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[2]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[2]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[2].name: Value is 'answer' but must be 'feature'
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[3]: Parameters.parameter.part: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot)
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[3]: Slice 'Parameters.parameter.part:name': a matching slice is required, but not found (from http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# Grahame has verified these Parameters.parameter.part errors are caused by a bug in the IG publisher that will be fixed in a future release. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.2Epart.20errors
+
+ERROR: Parameters/FeatureQueryOutputParametersExample: Parameters.parameter[0].part[3].name: Value is 'processing-status' but must be 'feature'
+== fsh-generated\resources\StructureDefinition-FeatureCapabilityStatement.json ==
+
+
