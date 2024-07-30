@@ -8,8 +8,8 @@ In the lead-up to R5 we created a draft update to the CapabilityStatement resour
 
 The key details of this IG are in the following locations:
 
-* (Specification)[specification.html]: Contains the formal specification of the application feature framework such as defining features, querying for features, and feature negotiation.
-* (Artifact Index)[artifacts.html]: The implementable artifacts defined in this IG such as profiles, value sets, code systems, and operation definitions.
+* [Specification](specification.html): Contains the formal specification of the application feature framework such as defining features, querying for features, and feature negotiation.
+* [Artifact Index](artifacts.html): The implementable artifacts defined in this IG such as profiles, value sets, code systems, and operation definitions.
 
 ## Credits
 
