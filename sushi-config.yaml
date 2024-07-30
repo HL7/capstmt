@@ -8,7 +8,7 @@ canonical: http://hl7.org/fhir/uv/application-feature
 name: ApplicationFeatureFramework
 title: FHIR Application Feature Framework Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 version: 1.0.0-ballot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
@@ -24,7 +24,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: fhir
 publisher:
-  name: HL7 International / Public Health
+  name: HL7 International / FHIR Infrastructure
   url: http://www.hl7.org/Special/committees/fiwg
   
   
