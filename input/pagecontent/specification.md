@@ -35,12 +35,12 @@ Here is an example of a feature defined for all resources available via REST:
 		<CapabilityStatement xmlns="http://hl7.org/fhir">
 			<rest>
 				<extension
-						   url="http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+						   url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
 				  <extension url="code">
 					<valueCodeableConcept>
 					  <coding>
 						<system
-								value="http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
+								value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
 						<code value="versioning"/>
 					  </coding>
 					</valueCodeableConcept>
@@ -49,7 +49,7 @@ Here is an example of a feature defined for all resources available via REST:
 					<valueCodeableConcept>
 					  <coding>
 						<system
-								value="http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
+								value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
 						<code value="versioned"/>
 					  </coding>
 					</valueCodeableConcept>
@@ -66,12 +66,12 @@ Here is the same feature only defined on CodeSystem:
 				<resource>
 					<type value="CodeSystem"/>
 					<extension
-							   url="http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+							   url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
 					  <extension url="code">
 						<valueCodeableConcept>
 						  <coding>
 							<system
-									value="http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
+									value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
 							<code value="versioning"/>
 						  </coding>
 						</valueCodeableConcept>
@@ -80,7 +80,7 @@ Here is the same feature only defined on CodeSystem:
 						<valueCodeableConcept>
 						  <coding>
 							<system
-									value="http://www.hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
+									value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
 							<code value="versioned"/>
 						  </coding>
 						</valueCodeableConcept>

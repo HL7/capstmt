@@ -5,7 +5,6 @@ Description: "A feature that may be declared in a capability statement."
 * ^version = "4.0.1"
 * ^status = #active
 * ^date = "2023-10-11"
-* ^publisher = "HL7 (FHIR Project)"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^compositional = true
@@ -38,7 +37,6 @@ Description: "A feature value that may be declared in a capability statement."
 * ^version = "4.0.1"
 * ^status = #active
 * ^date = "2023-10-11"
-* ^publisher = "HL7 (FHIR Project)"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^compositional = true
