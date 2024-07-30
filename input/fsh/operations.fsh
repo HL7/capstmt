@@ -16,8 +16,8 @@ Usage: #definition
 * type = true
 * instance = false
 
-* inputProfile = "http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"
-* outputProfile = "http://www.hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"
+* inputProfile = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"
+* outputProfile = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"
 * parameter[0].name = #feature
 * parameter[0].use = #in
 * parameter[0].min = 1
