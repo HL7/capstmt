@@ -1,8 +1,6 @@
 == Suppressed Messages ==
 
-# JIRA spec pull request filed, waiting for someone with write access to merge: https://github.com/HL7/JIRA-Spec-Artifacts/pull/1035
 
-ERROR: There is no jira specification file defined with the expected name of FHIR-application-feature in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
 
 # The following warning is in the FHIR R4 core CapabiltyStatement resource definition and only appears in the snapshot of the profile in this IG
 
