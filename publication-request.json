@@ -1,14 +1,14 @@
 {
     "package-id": "hl7.fhir.uv.application-feature",
     "version": "1.0.0-ballot",
-    "path": "http://hl7.org/fhir/uv/application-feature/2024Sept",
+    "path": "http://hl7.org/fhir/uv/application-feature/2024Sep",
     "mode": "working",
     "status": "ballot",
     "sequence": "STU 1",
     "first": true,
     "desc": "FHIR Application Feature Framework Implementation Guide, 1.0.0 Ballot - US Realm STU",
 	"title": "FHIR Application Feature Framework Implementation Guide",
-	"ci-build": "https://build.fhir.org/ig/HL7/capstmt",
+	"ci-build": "http://build.fhir.org/ig/HL7/capstmt",
 	"category": "Infrastructure",
 	"introduction": "CapabilityStatement is the largest/most complex of the infrastructure resources, yet there continues to be pressure to add yet more capabilities to describe additional nuances of how systems behave (or are desired to behave). As well, the things people want to say about systems often covers concepts that are outside FHIR proper (e.g. CDS Hooks, SMART) or even outside HL7. This IG defines a terminology-based approach to managing new assertions around system capabilities to support these needs and will also enable dynamic feature negotiation between various actors."
 }
