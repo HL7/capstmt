@@ -8,5 +8,5 @@ Description: "This extension documents the features of a system using code/value
     definition 1..1 MS and
     value 1..1 MS 
 * extension[definition].value[x] 1..1
-* extension[definition].value[x] only Canonical(StructureDefinition)
+* extension[definition].value[x] only Canonical(FeatureDefinition)
 * extension[value].value[x] 1..1 

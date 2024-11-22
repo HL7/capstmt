@@ -10,7 +10,7 @@ title: FHIR Application Feature Framework Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 1.0.0-ballot
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: STU1 Ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -27,7 +27,9 @@ publisher:
   name: HL7 International / FHIR Infrastructure
   url: http://www.hl7.org/Special/committees/fiwg
   
-  
+parameters:
+  custom-resource: fsh-generated/resources/StructureDefinition-FeatureDefinition.json
+
 menu:
   Home: index.html
   Table of Contents: toc.html

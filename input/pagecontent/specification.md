@@ -1,17 +1,189 @@
 
 ### Features
 
-The backbone of the CapabilityStatement resource lays out which resources are supported by the system, and which API interactions, operations and search parameters are supported or required for which resources. However due to the richness of the FHIR specification, there are many features for how these general API capabilities are used in detail.
+Welcome to the FHIR Application Feature Framework.
 
-The existing capability statement could support all these features by continuing to add various boolean flags and coded elements, as has been done. There's a couple of problems with this approach:
+A Feature is a software behavior that applications may choose to implement, or be required to implement,
+where the existence (or not) of the behavior it describes changes the behavior of other actors in the 
+ecosystem. Features may be software behaviors that are directly related to FHIR based interoperability, 
+such  as "forces version-aware updates on resources", or they may be more general - such as "passes a
+testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate to the user interface/experience, 
+such as "the interface complies to a [named national specification]".
 
-The CapabilityStatement resource is too large, and getting larger. This applies to both the definition (general design) and also instances of the resources, which frequently run to many megabytes in side
-Clients are often interested in a very specific subset of these features, but the existing design doesn't support subsetting or negotiation to find out whether specific features are supported
-After considerable discussion, FHIR-I agreed to draft this alternative, where the features are defined using a terminological approach that allows for more flexibility around feature negotation. Note that this approach basically mandates feature negotation, because while the design of the resource itself is simplified, the actual instances of fully populated CapabilityStatement resources are very much larger. For this reason, the general intent is that by default, servers do not populate any features in their statements unless asked, though there is still utility in a fully populated feature statement.
+There is no scope limitation to the kinds of things that Features might be be described, but the intent of 
+features is that they relate to software behaviors that affect the other participants in the ecosystem of 
+FHIR exchange.
 
-#### How Features work
+#### Defining Features 
 
-Features may be declared in a capability statement using the Capability Features CodeSystem. Each Feature is a pair: a code that identifies of which features is being described, and a value for that feature.
+Features are defined using [FeatureDefinitions](StructureDefinition-FeatureDefinition.html). This is a 
+logical structure that looks a lot like a FHIR resource (and may become one in a future version of the 
+FHIR specification). The important parts of the FeatureDefintion are:
+
+* The URL, which defines the Feature 
+* The type of the value - the type that appears when the Feature is used in practice. Most Features have values that are boolean (yes/no) or simple codes, but more complex types are possible
+* A list of contexts - where in a resource they might be found. Most Features will appear in either the [[[CapabilityStatement]]] or [[[TerminologyCapabilities]]] resources, but other resources are allowed
+* A list of qualifiers that might be provided, and whether they must be provided for the feature to have meaning (not that non-optional features might still be omitted in queries, but can't be omitted when declaring a specific feature)
+
+#### Features Defined in this Specification
+
+The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
+supports. This feature is used by applications to declare that they support the application feature framework at the root of their capability statement. 
+
+Note that applications can implement some of all of this specification without declaring that they support the application feature framework, but if they 
+do declare that it is supported, they SHALL support the following functionality:
+
+* todo....
+
+#### Declaring Features
+
+Features are declared in an extension. Each Feature is a pair: a code that identifies of which features is being described, and a value for that feature.
+
+```json
+  "extension" : [{
+	"url" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature",
+    "extension" : [{
+	  "url" : "definition",
+      "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"
+	},{
+  	  "url" : "value",
+	  "valueCode" : "[[[$ver]]]"
+	}]
+  }]
+```
+
+or in xml:
+
+```xml
+  <extension url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+    <extension url="definition">
+      <valueCanonical value="http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"/>
+	</extension>
+	<extension url="value">
+	  <valueCode value="[[[$ver]]]"/>
+	</extension>
+  </extension>
+```
+
+The feature extension can appear in any resource, on any element, but in practice, it's only allowed 
+to appear on the element contexts allowed in the Feature Definition. For example, the feature definition
+for [[[http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature]]] says that it appears 
+on the root element of the [[[CapabilityStatement]]] resource (```http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement```):
+
+```json
+{ 
+  "resourceType" : "CapabilityStatement",
+  "id" : "something",
+  "extension" : [{
+	"url" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature",
+    "extension" : [{
+	  "url" : "definition",
+      "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"
+	},{
+  	  "url" : "value",
+	  "valueCode" : "[[[$ver]]]"
+	}]
+  }]
+```
+
+or in xml:
+
+```xml
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="something"/>
+  <extension url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+    <extension url="definition">
+      <valueCanonical value="http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"/>
+	</extension>
+	<extension url="value">
+	  <valueCode value="[[[$ver]]]"/>
+	</extension>
+  </extension>
+</CapabilityStatement>
+```
+
+Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement.
+
+Here is an example of a feature defined for all resources available via REST:
+
+```xml
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <rest>
+    <extension url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+      <extension url="code">
+        <valueCanonical value="http://hl7.org/fhir/uv/application-feature/CodeSystem/feature-versioning"/>
+      </extension>
+      <extension url="value">
+        <valueCode value="versioned-update"/>
+      </extension>
+    </extension>
+  </rest>
+</CapabilityStatement>
+```
+		
+Here is the same feature only defined on CodeSystem:
+  
+
+```xml  
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <rest>
+    <resource>
+      <type value="CodeSystem"/>
+	  <extension url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
+		<extension url="code">
+		  <valueCanonical value="http://hl7.org/fhir/uv/application-feature/CodeSystem/feature-versioning"/>
+		</extension>    
+		<extension url="value">
+		  <valueCode value="versioned-update"/>
+	    </extension>
+	  </extension>
+    </resource>
+  </rest>
+</CapabilityStatement>
+```
+
+Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the FeatureCapabilityStatement profile. Feature contexts are defined for features that are deeper into the system than those defined by the FeatureCapabilityStatement profile.
+
+#### Asking for features in a CapabilityStatement 
+
+In general, default CapabilityStatements returned from the ```/metadata``` endpoint do not include 
+Feature assertions (other then possibly the FeatureFramework Feature itself), though specific features or 
+other implementation guides may require that features are populated in the CapabilityStatement by default.
+For other CapabilityStatements - e.g. those produced to store in registries as static copies, it is at the
+discretion of the application to decide how much to populate the CapabilityStatement with the applicable 
+features.
+
+When an application fetches 
+
+----- 
+
+up to here....
+
+------
+
+General Patterns
+
+* feature alone: returns list of values on the server (can refuse - see processing-status)
+* feature + context: returns list of values in that context on the server
+* feature + value: returns answer of true/false if all contexts match the supplied value
+* feature + context + value: returns answer of true/false if the supplied context matches the supplied value
+
+Responses
+
+* feature: 'feature' literal (one repetition per request feature param)
+* name: name of the feature (uri)
+* context: present if provided, used to match responses to requests (uri)
+* processing-status: code from the server about processing the request (e.g., all-ok, not-supported, etc.)
+* value:
+  * if provided in input: the value requested (datatype as defined by the feature) (even if processing fails)
+  * if not provided: the value of the feature (can have multiple repetitions) (uses datatype of feature)
+* answer:
+  * only present if processing was successful (all-ok)
+  * if a value is provided, does the supplied value match the server feature-supported value
+  * if a value is not provided, does not exist
+
+
+By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
 
 ##### Identifying a Feature
 
@@ -26,72 +198,6 @@ The full details of the expression format are described below.
 
 Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size, instead use the $feature-query operation to determine if the server supports needed features. 
 
-##### Representing Features in a CapabilityStatement
-
-The CapabilityStatement can include features either on the base of the statement, or on the elements inside the resource. Features defined inside the capability statement automatically have an implied scope, but are otherwise the same statement.
-
-Here is an example of a feature defined for all resources available via REST:
-
-		<CapabilityStatement xmlns="http://hl7.org/fhir">
-			<rest>
-				<extension
-						   url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
-				  <extension url="code">
-					<valueCodeableConcept>
-					  <coding>
-						<system
-								value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
-						<code value="versioning"/>
-					  </coding>
-					</valueCodeableConcept>
-				  </extension>
-				  <extension url="value">
-					<valueCodeableConcept>
-					  <coding>
-						<system
-								value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
-						<code value="versioned"/>
-					  </coding>
-					</valueCodeableConcept>
-				  </extension>
-				</extension>
-			</rest>
-		</CapabilityStatement>
-		
-		
-Here is the same feature only defined on CodeSystem:
-  
-		<CapabilityStatement xmlns="http://hl7.org/fhir">
-			<rest>
-				<resource>
-					<type value="CodeSystem"/>
-					<extension
-							   url="http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature">
-					  <extension url="code">
-						<valueCodeableConcept>
-						  <coding>
-							<system
-									value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-cs"/>
-							<code value="versioning"/>
-						  </coding>
-						</valueCodeableConcept>
-					  </extension>
-					  <extension url="value">
-						<valueCodeableConcept>
-						  <coding>
-							<system
-									value="http://hl7.org/fhir/uv/application-feature/CodeSystem/capability-feature-value-cs"/>
-							<code value="versioned"/>
-						  </coding>
-						</valueCodeableConcept>
-					  </extension>
-					</extension>
-				</resource>
-			</rest>
-		</CapabilityStatement>
-		
-
-Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the FeatureCapabilityStatement profile. Feature contexts are defined for features that are deeper into the system than those defined by the FeatureCapabilityStatement profile.
 
 #### Asking for features in a CapabilityStatement 
 
