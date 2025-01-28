@@ -1,4 +1,4 @@
-## Overview
+### Overview
 
 The Application Feature Framework describes a set of extensions, formats and operations that allow applications 
 to describe how they implement their FHIR Interfaces and their related behavior, and how applications and 
@@ -21,12 +21,12 @@ This implementation guide defines functionality to enable these behaviors:
 * Querying a server to find out what features it supports (generally, or in a particular context)
 * Marking a resource to declare that it was produced by a system with a particular feature (this is done where knowledge of the feature might alter subsequent processing in a fashion not dependent on the explicit data in the instance)
 
-## In this IG 
+### In this IG 
 
 * [Specification](specification.html): Contains the formal specification of the application feature framework such as defining features, querying for features, and feature negotiation.
 * [Artifact Index](artifacts.html): The implementable artifacts defined in this IG such as profiles, value sets, code systems, and operation definitions.
 
-## Relationship with CapabilityStatmnet and TerminologyCapabilities 
+### Relationship with CapabilityStatemnet and TerminologyCapabilities 
 
 
 The backbone of the [[[CapabilityStatement]]] resource lays out which resources are supported by the system, and which API interactions, operations and search parameters are supported or required for which resources. However due to the richness of the FHIR specification, there are many features for how these general API capabilities are used in detail.
@@ -42,7 +42,7 @@ Discussion on these issues led to the design of this Application Feature Framewo
 Most of the trial-use properties in CapabilityStatement are actually features, and they may be withdrawn in a future version of the FHIR specification once the Application Feature Framework is well-proven.
 The TerminologyCapabilities resources may also be significantly trimmed down during this process.
 
-## Credits
+### Credits
 
 * Rick Geimer, Lantana Consulting Group
 * Grahame Grieve, Health Intersections
