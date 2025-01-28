@@ -254,7 +254,7 @@ Alternatively, a client can include a feature assertion on an HTTP header:
 		GET [base]/Patient/23/_history/45
 		Required-Features: param=read@Patient(true)
 
-The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for AdverseEvent.
+The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for Patient.
 
 Clients can only expect a server to check these headers if the server declares that it does using the feature rest:server.feature-header = true.
 
