@@ -5,6 +5,10 @@ to describe how they implement their FHIR Interfaces and their related behavior,
 system administrators can query applications about their feature set, which features are available, and how 
 they can work with each other.
 
+This implementation guide is focused on 'features' of systems.  A 'feature' is any kind of system capability, 
+such as support for a type of resource, certain operation or search parameter, the ability to accept certain 
+parameters to an operation, the ability to expose certain security settings, etc.
+
 Features may be software behaviors that are directly related to FHIR based interoperability, such 
 as "forces version-aware updates on resources", or they may be more general - such as "passes a
 testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate
