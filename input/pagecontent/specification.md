@@ -245,7 +245,7 @@ TBD: add example in/out params and explain invoking them in a POST
 
 #### Feature Negotiation
 
-In addition to querying for a capability statement, clients can do negotation. There are 2 different approaches that are supported: an operation, and an HTTP header.
+In addition to querying for a capability statement, clients can do negotiation. There are 2 different approaches that are supported: an operation, and an HTTP header.
 
 ##### HTTP Header
 
