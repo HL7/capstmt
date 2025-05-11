@@ -8,7 +8,7 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter 1..* MS
 * parameter.name 1..1 MS
 * parameter.name = "feature"
-* parameter.part ^slicing.discriminator.type = #pattern
+* parameter.part ^slicing.discriminator.type = #value
 * parameter.part ^slicing.discriminator.path = "$this.name"
 * parameter.part ^slicing.rules = #open
 * parameter.part ^slicing.description = "Slice based on $this pattern"

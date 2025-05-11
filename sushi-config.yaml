@@ -29,6 +29,7 @@ publisher:
   
 parameters:
   custom-resource: fsh-generated/resources/StructureDefinition-FeatureDefinition.json
+  pin-canonicals: pin-multiples
 
 menu:
   Home: index.html

@@ -2,9 +2,28 @@
 
 
 
-# The following warning is in the FHIR R4 core CapabiltyStatement resource definition and only appears in the snapshot of the profile in this IG
+# The following warnings are in the FHIR R4 core CapabiltyStatement resource definition and only appears in the snapshot of the profile in this IG
 
 WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace ' not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))'
+
+WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[12].binding: The definition for the element 'CapabilityStatement.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[22].binding: The definition for the element 'CapabilityStatement.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[26].binding: The definition for the element 'CapabilityStatement.kind' binds to the value set 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[68].binding: The definition for the element 'CapabilityStatement.rest.resource.type' binds to the value set 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureDefinition: StructureDefinition.snapshot.element[12].binding: The definition for the element 'FeatureDefinition.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureDefinition: StructureDefinition.snapshot.element[22].binding: The definition for the element 'FeatureDefinition.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.differential.element[18].binding: The definition for the element 'Parameters.parameter.part.value[x]' binds to the value set 'http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs' which is experimental, but this structure is not labeled as experimental
+
+WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.snapshot.element[57].binding: The definition for the element 'Parameters.parameter.part.value[x]' binds to the value set 'http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs' which is experimental, but this structure is not labeled as experimental
+
+
+
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
