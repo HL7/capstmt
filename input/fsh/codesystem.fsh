@@ -11,7 +11,7 @@ Description: "A feature that may be declared in a capability statement."
 * ^content = #complete
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+// * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * #features "Root concept for all feature definitions"
 * #features #feature-header "Whether the server supports the Required-Feature header by which a client makes a feature as mandatory for processing a requrest properly"
 * #features #security-cors
@@ -43,7 +43,7 @@ Description: "A feature value that may be declared in a capability statement."
 * ^content = #complete
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+// * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * #values "Root concept for all feature values"
 * #values #booleans "Values that are booleans"
 * #values #booleans #true "Value is true"
