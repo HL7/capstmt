@@ -1,0 +1,8 @@
+* Create a profile for TerminologyCapabilites?
+* Can we make the feature extension a simple extension with just a canonical reference as the value? If not, can we restrict value to a boolean and code in the complex extension, or do we need the full set of datatypes?
+* Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"?
+* Section 3.1.2, discuss the todo...
+* Review the errors in the QA file. Are they legit, or are they IG publisher issues? 
+* Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now.
+
+

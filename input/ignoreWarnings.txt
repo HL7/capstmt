@@ -22,7 +22,14 @@ WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.d
 
 WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.snapshot.element[57].binding: The definition for the element 'Parameters.parameter.part.value[x]' binds to the value set 'http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs' which is experimental, but this structure is not labeled as experimental
 
+# Setting jurisdiction to 001 'World' causes the following informational message
 
+Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+
+# URLs that are not intended to resolve
+
+URL value 'versioning' does not resolve
+URL value 'versioned' does not resolve
 
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
@@ -40,4 +47,11 @@ INFORMATION: CodeSystem/capability-feature-value-cs: CodeSystem: Most code syste
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
 INFORMATION: CodeSystem/processing-status-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# Extensions that don't match a slice in the sharablevalueset profile, which is not a problem
+
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/shareablevalueset|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Information about pinned versions
+Pinned the version of http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition to 1.0.0-ballot from choices of 1.0.0-ballot (hl7.fhir.uv.application-feature#1.0.0-ballot), {{unversioned}} (null)
 

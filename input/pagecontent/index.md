@@ -1,7 +1,6 @@
 ### Overview
 
-The Application Feature Framework describes a set of extensions, formats and operations that allow applications 
-to describe how they implement their FHIR Interfaces and their related behavior, and how applications and 
+The Application Feature Framework describes a set of logical models, extensions, formats and operations that allow applications to describe how they implement their FHIR Interfaces and their related behavior, and how applications and 
 system administrators can query applications about their feature set, which features are available, and how 
 they can work with each other.
 
@@ -28,7 +27,7 @@ This implementation guide defines functionality to enable these behaviors:
 ### In this IG 
 
 * [Specification](specification.html): Contains the formal specification of the application feature framework such as defining features, querying for features, and feature negotiation.
-* [Artifact Index](artifacts.html): The implementable artifacts defined in this IG such as profiles, value sets, code systems, and operation definitions.
+* [Artifact Index](artifacts.html): The implementable artifacts defined in this IG such as profiles, logical models, value sets, code systems, and operation definitions.
 
 ### Relationship with CapabilityStatemnet and TerminologyCapabilities 
 
@@ -44,7 +43,8 @@ The existing CapabilityStatement could support all these features by continuing 
 Discussion on these issues led to the design of this Application Feature Framework, where the features are defined using a terminological approach that allows for more flexibility around feature negotation. Note that this approach basically mandates feature negotation, because while the design of the resource itself is simplified, the actual instances of fully populated CapabilityStatement resources are very much larger. For this reason, the general intent is that by default, servers do not populate many features in their statements unless asked, though there is still utility in a fully populated feature statement.
 
 Most of the trial-use properties in CapabilityStatement are actually features, and they may be withdrawn in a future version of the FHIR specification once the Application Feature Framework is well-proven.
-The TerminologyCapabilities resources may also be significantly trimmed down during this process.
+
+The [[[TerminologyCapabilities]]] resource servers a similar purpose as CapabilityStatement for terminology services, as such it makes sense to allow feature definitions there as well. The TerminologyCapabilities resources may also be significantly trimmed down during this process.
 
 ### Credits
 
