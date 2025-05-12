@@ -257,11 +257,11 @@ Responses
   * if a value is not provided, does not exist
 
 
-By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried via the  [FeatureQuery](OperationDefinition-feature-query.html) operation.
+By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried via the  [FeatureQuery](OperationDefinition-feature-query.html) operation using an HTTP GET or POST, or via an HTTP header.
 
-##### Features Parameter in GET requests
+##### Features Query using HTTP GET
 
-Clients can request that a server by using the feature parameter, which represents a query for information about a particular feature:
+Clients can request that a server by using GET as follows:
 
 		GET [base]/feature-query?feature[@context](value)
 
@@ -273,15 +273,11 @@ Requesting multiple features:
 
 		GET [base]/feature-query?param=read@Patient(true)&param=update@Patient(true)
 
-##### Feature Query Operation
+##### Feature Query using HTTP POST
 
 TBD: add example in/out params and explain invoking them in a POST
 
-#### Feature Negotiation
-
-In addition to querying for a capability statement, clients can do negotiation. There are 2 different approaches that are supported: an operation, and an HTTP header.
-
-##### HTTP Header
+##### Featuires Query using the Required-Features HTTP Header
 
 Alternatively, a client can include a feature assertion on an HTTP header:
 
