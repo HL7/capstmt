@@ -59,3 +59,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 # Information about pinned versions
 Pinned the version of http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition to 1.0.0-ballot from choices of 1.0.0-ballot (hl7.fhir.uv.application-feature#1.0.0-ballot), {{unversioned}} (null)
 
+# Skipping the OID for this example, as not important
+
+The resource CapabilityStatement/FeatureCapabilityStatementExample could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
