@@ -25,6 +25,38 @@ FHIR specification). The important parts of the FeatureDefintion are:
 * A list of contexts - where in a resource they might be found. Most Features will appear in either the [[[CapabilityStatement]]] or [[[TerminologyCapabilities]]] resources, but other resources are allowed
 * A list of qualifiers that might be provided, and whether they must be provided for the feature to have meaning (not that non-optional features might still be omitted in queries, but can't be omitted when declaring a specific feature)
 
+```json
+{
+  "resourceType" : "FeatureDefinition",
+  "id" : "FeatureSupport",
+  "url" : "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport",
+  "name" : "ApplicationFeatureSupport",
+  "status" : "active",
+  "description" : "This feature is used to report conformance/support of a particular version of the Feature Framework. The value is a code which is the most recent version of the framework supported",
+  "valueType" : "code",
+  "context" : [
+    🔗 "http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement"
+  ]
+}
+```
+
+and in xml
+
+```xml
+<FeatureDefinition xmlns="http://hl7.org/fhir">
+  <id value="FeatureSupport"/>
+  <url
+       value="http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"/>
+  <name value="ApplicationFeatureSupport"/>
+  <status value="active"/>
+  <description
+               value="This feature is used to report conformance/support of a particular version of the Feature Framework. The value is a code which is the most recent version of the framework supported"/>
+  <valueType value="code"/>
+  <context
+           value="http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement"/>
+</FeatureDefinition>
+```
+
 #### Features Defined in this Specification
 
 The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
@@ -199,7 +231,9 @@ The full details of the expression format are described below.
 Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size, instead use the $feature-query operation to determine if the server supports needed features. 
 
 
-#### Asking for features in a CapabilityStatement 
+#### Asking for Features
+
+Clients can query servers about the features they support using the [FeatureQuery](OperationDefinition-feature-query.html) operation. 
 
 General Patterns
 
@@ -223,7 +257,7 @@ Responses
   * if a value is not provided, does not exist
 
 
-By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
+By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried via the  [FeatureQuery](OperationDefinition-feature-query.html) operation.
 
 ##### Features Parameter in GET requests
 
