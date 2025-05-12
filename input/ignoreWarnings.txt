@@ -31,6 +31,10 @@ Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 URL value 'versioning' does not resolve
 URL value 'versioned' does not resolve
 
+# Canonical URLs that won't resolve until publication
+
+Canonical URL 'https://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query' does not resolve
+
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
