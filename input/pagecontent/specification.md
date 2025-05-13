@@ -62,10 +62,11 @@ and in xml
 The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
 supports. This feature is used by applications to declare that they support the application feature framework at the root of their capability statement. 
 
-Note that applications can implement some of all of this specification without declaring that they support the application feature framework, but if they 
-do declare that it is supported, they SHALL support the following functionality:
+Applications can implement some of all of this specification without declaring that they support the application feature framework, but if they do declare that it is supported, they SHALL support the following functionality:
 
 * todo....
+
+Note: clients can query for features without first checking for FeatureSupport, understanding that if the target server or application does not support this framework, the response(s) will not conform to those detailed in this specification.
 
 #### Declaring Features
 

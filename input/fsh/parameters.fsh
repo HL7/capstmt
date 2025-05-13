@@ -45,7 +45,7 @@ Usage: #example
 * parameter[=].part[name].name = "definition"
 * parameter[=].part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
 * parameter[=].part[value].name = "value"
-* parameter[=].part[value].valueBoolean = true
+* parameter[=].part[value].valueCode = #1.0.0
 
 
 /**************************************************************************************************************/
@@ -109,7 +109,7 @@ Usage: #example
 * parameter.part[name].name = "definition"
 * parameter.part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
 * parameter.part[value].name = "value"
-* parameter.part[value].valueBoolean = true
+* parameter.part[value].valueCode = #1.0.0
 * parameter.part[matches].name = "answer"
 * parameter.part[matches].valueBoolean = true
 * parameter.part[processing-status].name = "processing-status"
