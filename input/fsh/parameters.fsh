@@ -19,10 +19,10 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 	  value 0..1 MS
 	  
 * parameter.part[name].name 1..1 MS
-* parameter.part[name].name = "name"
+* parameter.part[name].name = "definition"
 * parameter.part[name].value[x] 1..1 MS
-* parameter.part[name].value[x] only uri
-* parameter.part[name].value[x] ^short = "The name of the feature. If not a core FHIR feature, must be a fully qualified URI"
+* parameter.part[name].value[x] only Canonical(FeatureDefinition)
+* parameter.part[name].value[x] ^short = "The definition of the feature"
 
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"
@@ -42,10 +42,10 @@ InstanceOf: FeatureQueryInputParameters
 Description: "An example input parameter"
 Usage: #example
 * parameter[+].name = "feature"
-* parameter[=].part[name].name = "name"
-* parameter[=].part[name].valueUri = #versioning
+* parameter[=].part[name].name = "definition"
+* parameter[=].part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
 * parameter[=].part[value].name = "value"
-* parameter[=].part[value].valueUri = #versioned
+* parameter[=].part[value].valueBoolean = true
 
 
 /**************************************************************************************************************/
@@ -71,10 +71,10 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 	  processing-status 0..1 MS
 	  
 * parameter.part[name].name 1..1 MS
-* parameter.part[name].name = "name"
+* parameter.part[name].name = "definition"
 * parameter.part[name].value[x] 1..1 MS
-* parameter.part[name].value[x] only uri
-* parameter.part[name].value[x] ^short = "The name of the feature. If not a core FHIR feature, must be a fully qualified URI"
+* parameter.part[name].value[x] only Canonical(FeatureDefinition)
+* parameter.part[name].value[x] ^short = "The definition of the feature"
 
 * parameter.part[context].name 1..1 MS
 * parameter.part[context].name = "context"
@@ -106,10 +106,10 @@ InstanceOf: FeatureQueryOutputParameters
 Description: "An example input parameter"
 Usage: #example
 * parameter.name = "feature"
-* parameter.part[name].name = "name"
-* parameter.part[name].valueUri = #versioning
+* parameter.part[name].name = "definition"
+* parameter.part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
 * parameter.part[value].name = "value"
-* parameter.part[value].valueUri = #versioned
+* parameter.part[value].valueBoolean = true
 * parameter.part[matches].name = "answer"
 * parameter.part[matches].valueBoolean = true
 * parameter.part[processing-status].name = "processing-status"

@@ -2,7 +2,7 @@
 * FeatureDefinition.valueSet: is this the ValueSet for FeatureDefinition.valueType, the qualifiers, or both? Is there ever a case where the qualifiers will need a different ValueSet?
 * Create a profile for TerminologyCapabilites to show where the feature extension is allowed?
 * Can we make the feature extension a simple extension with just a canonical reference as the value? If not, can we restrict value to a boolean and code in the complex extension, or do we need the full set of datatypes? The current example only shows the FeatureDefinition version there, but that could just be appended to the canonical if important.
-* Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"?
+* Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"? See https://jira.hl7.org/browse/FHIR-47257.
 * Section 3.1.2, discuss the todo...
 * Review the errors in the QA file. Are they legit, or are they IG publisher issues? 
 * Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead?
