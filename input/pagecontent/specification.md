@@ -10,8 +10,8 @@ such  as "forces version-aware updates on resources", or they may be more genera
 testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate to the user interface/experience, 
 such as "the interface complies to a [named national specification]".
 
-There is no scope limitation to the kinds of things that Features might be be described, but the intent of 
-features is that they relate to software behaviors that affect the other participants in the ecosystem of 
+There is no scope limitation to the kinds of features that might be described, but the intent of this
+features framework is to describe software behaviors that affect participants in the ecosystem of 
 FHIR exchange.
 
 #### Defining Features 
