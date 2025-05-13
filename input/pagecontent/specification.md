@@ -8,7 +8,7 @@ where the existence (or not) of the behavior it describes changes the behavior o
 ecosystem. Features may be software behaviors that are directly related to FHIR based interoperability, 
 such  as "forces version-aware updates on resources", or they may be more general - such as "passes a
 testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate to the user interface/experience, 
-such as "the interface complies to a [named national specification]".
+such as "the interface complies to [some named national specification]".
 
 There is no scope limitation to the kinds of features that might be described, but the intent of this
 features framework is to describe software behaviors that affect participants in the ecosystem of 
@@ -228,8 +228,7 @@ Features are identified by an expression that includes the scope in which the fe
 
 The full details of the expression format are described below.
 
-Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size, instead use the $feature-query operation to determine if the server supports needed features. 
-
+Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size. Clients should instead use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#featuires-query-using-the-required-features-http-header) HTTP header to determine if the server supports needed features. 
 
 #### Asking for Features
 
