@@ -276,6 +276,133 @@ Requesting multiple features:
 
 TBD: add example in/out params and explain invoking them in a POST
 
+Clients can use HTTP POST with a Parameters resource to query for features. The following example shows how to use POST to check if a server supports this feature framework:
+
+		POST [base]/$feature-query
+		
+An instance of [Feature Query Input Parameters](StructureDefinition-FeatureQueryInputParameters.html) would be the body of this POST.
+
+JSON example:
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "FeatureQueryInputParametersExample",
+  "meta" : {
+    "profile" : [
+      🔗 "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"
+    ]
+  },
+  "parameter" : [
+    {
+      "name" : "feature",
+      "part" : [
+        {
+          "name" : "definition",
+          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
+        },
+        {
+          "name" : "value",
+          "valueCode" : "1.0.0"
+        }
+      ]
+    }
+  ]
+}
+```
+XML example:
+
+```xml
+<Parameters xmlns="http://hl7.org/fhir">
+	<id value="FeatureQueryInputParametersExample"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"/>
+	</meta>
+	<parameter>
+		<name value="feature"/>
+		<part>
+			<name value="definition"/>
+			<valueCanonical value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"/>
+		</part>
+		<part>
+			<name value="value"/>
+			<valueCode value="1.0.0"/>
+		</part>
+	</parameter>
+</Parameters>
+```
+
+The resulting output paramater is an instance of [Feature Query Output Parameters](StructureDefinition-FeatureQueryOutputParameters.html).
+
+JSON example
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "FeatureQueryOutputParametersExample",
+  "meta" : {
+    "profile" : [
+      🔗 "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"
+    ]
+  },
+  "parameter" : [
+    {
+      "name" : "feature",
+      "part" : [
+        {
+          "name" : "definition",
+          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
+        },
+        {
+          "name" : "value",
+          "valueCode" : "1.0.0"
+        },
+        {
+          "name" : "answer",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "processing-status",
+          "valueCode" : "all-ok"
+        }
+      ]
+    }
+  ]
+}
+```
+
+XML example
+
+```xml
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="FeatureQueryOutputParametersExample"/>
+  <meta>
+    <profile
+             value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"/>
+  </meta>
+  <parameter>
+    <name value="feature"/>
+    <part>
+      <name value="definition"/>
+      <valueCanonical
+                      value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"/>
+    </part>
+    <part>
+      <name value="value"/>
+      <valueCode value="1.0.0"/>
+    </part>
+    <part>
+      <name value="answer"/>
+      <valueBoolean value="true"/>
+    </part>
+    <part>
+      <name value="processing-status"/>
+      <valueCode value="all-ok"/>
+    </part>
+  </parameter>
+</Parameters>
+```
+
 ##### Featuires Negotiation using the Required-Features HTTP Header
 
 Alternatively, a client can include a feature assertion on an HTTP header:
