@@ -9,13 +9,12 @@ Usage: #definition
 * title = "Feature Query"
 * status = #active
 * kind = #operation
-* description = "This operation allows clients to query for features supported by a server."
+* description = "This operation allows clients to query for features supported by a server. The operation may be invoked via HTTP GET or POST. Details are on the [specification](specification.html) page."
 * code = #feature-query
 * base = "https://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
 * system = true
 * type = true
 * instance = false
-
 * inputProfile = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryInputParameters"
 * outputProfile = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"
 * parameter[0].name = #feature

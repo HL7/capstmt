@@ -14,7 +14,7 @@ There is no scope limitation to the kinds of features that might be described, b
 features framework is to describe software behaviors that affect participants in the ecosystem of 
 FHIR exchange.
 
-#### Defining Features 
+### Defining Features 
 
 Features are defined using [FeatureDefinitions](StructureDefinition-FeatureDefinition.html). This is a 
 logical structure that looks a lot like a FHIR resource (and may become one in a future version of the 
@@ -57,7 +57,7 @@ and in xml
 </FeatureDefinition>
 ```
 
-#### Features Defined in this Specification
+### Features Defined in this Specification
 
 The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
 supports. This feature is used by applications to declare that they support the application feature framework at the root of their capability statement. 
@@ -68,7 +68,7 @@ Applications can implement some of all of this specification without declaring t
 
 Note: clients can query for features without first checking for FeatureSupport, understanding that if the target server or application does not support this framework, the response(s) will not conform to those detailed in this specification.
 
-#### Declaring Features
+### Declaring Features
 
 Features are declared in an extension. Each Feature is a pair: a code that identifies of which features is being described, and a value for that feature.
 
@@ -177,7 +177,7 @@ Here is the same feature only defined on CodeSystem:
 
 Note, however, that the feature scopes are not restricted to the contexts implied by the structure of the FeatureCapabilityStatement profile. Feature contexts are defined for features that are deeper into the system than those defined by the FeatureCapabilityStatement profile.
 
-#### Asking for features in a CapabilityStatement 
+### Asking for features in a CapabilityStatement 
 
 In general, default CapabilityStatements returned from the ```/metadata``` endpoint do not include 
 Feature assertions (other then possibly the FeatureFramework Feature itself), though specific features or 
@@ -218,7 +218,7 @@ Responses
 
 By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
 
-##### Identifying a Feature
+### Identifying a Feature
 
 Features are identified by an expression that includes the scope in which the feature is being asserted. Here's some examples:
 
@@ -229,9 +229,9 @@ Features are identified by an expression that includes the scope in which the fe
 
 The full details of the expression format are described below.
 
-Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size. Clients should instead use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#featuires-query-using-the-required-features-http-header) HTTP header to determine if the server supports needed features. 
+Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size. Clients should instead use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header to determine if the server supports needed features. 
 
-#### Asking for Features
+### Asking for Features
 
 Clients can query servers about the features they support using the [FeatureQuery](OperationDefinition-feature-query.html) operation. 
 
@@ -258,7 +258,7 @@ Responses
 
 By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried via the  [FeatureQuery](OperationDefinition-feature-query.html) operation using an HTTP GET or POST, or via an HTTP header.
 
-##### Features Query using HTTP GET
+#### Features Query using HTTP GET
 
 Clients can request that a server by using GET as follows:
 
@@ -272,7 +272,7 @@ Requesting multiple features:
 
 		GET [base]/$feature-query?param=read@Patient(true)&param=update@Patient(true)
 
-##### Feature Query using HTTP POST
+#### Feature Query using HTTP POST
 
 TBD: add example in/out params and explain invoking them in a POST
 
@@ -403,24 +403,24 @@ XML example
 </Parameters>
 ```
 
-##### Featuires Negotiation using the Required-Features HTTP Header
+### Feature Negotiation using the Required-Features HTTP Header
 
 Alternatively, a client can include a feature assertion on an HTTP header:
 
 		GET [base]/Patient/23/_history/45
 		Required-Features: param=read@Patient(true)
 
-The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for Patient.
+The server checks the header, and returns a 501 Not implemented if it does not support reading historical entries for Patient.
 
 Clients can only expect a server to check these headers if the server declares that it does using the feature rest:server.feature-header = true.
 
 While there are two mechanisms to check for feature support (HTTP header and the $feature-query operation), these mechanisms have different purposes.  The HTTP header approach will limit whether the requested HTTP action will be performed based on whether the specified feature(s) are supported, while the $feature-query operation acts as a query that returns what features the system supports.
 
-##### Syntax Restrictions
+### Syntax Restrictions
 
 It is important to note that the characters @, *, and () are not allowed in the code, context, or value in a GET or while using the Required-Features header, since this would lead to ambiguous parsing. If an implementer's use case requires those characters, then only POST with a Parameters resource is allowed. 
 
-##### Security/Authorization
+### Security/Authorization
 
 The $feature-query operation and Required-Features header MAY take into account authorization.  For example, if querying for features when unauthorized, a server may choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. If no access is allowed for an unauthorized user, the $feature-query operation SHALL return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter. 
 

@@ -19,7 +19,7 @@ is qualified by the identity of the code system.
 
 This implementation guide defines functionality to enable these behaviors:
 * Defining Features 
-* Referring to Features from other resources (usually [[[CapabilityStatement]]] or [[[TerminologyCapabilities]]], but other resources are possible)
+* Referring to Features from other resources (usually [[[CapabilityStatement]]] or [[[TerminologyCapabilities]]]), but other resources are possible)
 * Declaring what features are supported (or possibly supported) by the application
 * Querying a server to find out what features it supports (generally, or in a particular context)
 * Marking a resource to declare that it was produced by a system with a particular feature (this is done where knowledge of the feature might alter subsequent processing in a fashion not dependent on the explicit data in the instance)
