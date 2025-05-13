@@ -37,17 +37,6 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[value].value[x] ^short = "The expected value of the feature. To query for multiple values, supply multiple parameter elements."
 
 
-Instance: FeatureQueryInputParametersExample
-InstanceOf: FeatureQueryInputParameters
-Description: "An example input parameter"
-Usage: #example
-* parameter[+].name = "feature"
-* parameter[=].part[name].name = "definition"
-* parameter[=].part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
-* parameter[=].part[value].name = "value"
-* parameter[=].part[value].valueCode = #1.0.0
-
-
 /**************************************************************************************************************/
 Profile:        FeatureQueryOutputParameters
 Parent:         Parameters
@@ -101,16 +90,3 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[processing-status].value[x] from http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs (required)
 * parameter.part[processing-status].value[x] ^short = "Indicates the processing status of the feature-query operation (all-ok, etc.)"
 
-Instance: FeatureQueryOutputParametersExample
-InstanceOf: FeatureQueryOutputParameters
-Description: "An example input parameter"
-Usage: #example
-* parameter.name = "feature"
-* parameter.part[name].name = "definition"
-* parameter.part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
-* parameter.part[value].name = "value"
-* parameter.part[value].valueCode = #1.0.0
-* parameter.part[matches].name = "answer"
-* parameter.part[matches].valueBoolean = true
-* parameter.part[processing-status].name = "processing-status"
-* parameter.part[processing-status].valueCode = #all-ok

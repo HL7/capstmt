@@ -16,9 +16,12 @@
 <artifact id="StructureDefinition/FeatureQueryInputParameters" key="StructureDefinition-FeatureQueryInputParameters" name="Feature Query Input Parameters"/>
 <artifact id="StructureDefinition/FeatureQueryOutputParameters" key="StructureDefinition-FeatureQueryOutputParameters" name="Feature Query Output Parameters"/>
 <artifact id="CapabilityStatement/FeatureCapabilityStatementExample" key="CapabilityStatement-FeatureCapabilityStatementExample" name="FeatureCapabilityStatementExample"/>
-<artifact id="Parameters/FeatureQueryInputParametersExample" key="Parameters-FeatureQueryInputParametersExample" name="FeatureQueryInputParametersExample"/>
-<artifact id="Parameters/FeatureQueryOutputParametersExample" key="Parameters-FeatureQueryOutputParametersExample" name="FeatureQueryOutputParametersExample"/>
+<artifact deprecated="true" id="Parameters/FeatureQueryInputParametersExample" key="Parameters-FeatureQueryInputParametersExample" name="FeatureQueryInputParametersExample"/>
+<artifact deprecated="true" id="Parameters/FeatureQueryOutputParametersExample" key="Parameters-FeatureQueryOutputParametersExample" name="FeatureQueryOutputParametersExample"/>
 <artifact id="FeatureDefinition/FeatureSupport" key="FeatureDefinition-FeatureSupport" name="FeatureSupport"/>
+<artifact id="Parameters/FeatureSupportInputParametersExample" key="Parameters-FeatureSupportInputParametersExample" name="FeatureSupportInputParametersExample"/>
+<artifact id="Parameters/FeatureSupportOutputParametersExample" key="Parameters-FeatureSupportOutputParametersExample" name="FeatureSupportOutputParametersExample"/>
+<artifact id="FeatureDefinition/PatientRead" key="FeatureDefinition-PatientRead" name="PatientRead"/>
 <artifact id="CodeSystem/processing-status-cs" key="CodeSystem-processing-status-cs" name="Processing Status Code System"/>
 <artifact id="ValueSet/processing-status-vs" key="ValueSet-processing-status-vs" name="Processing Status Value VS"/>
 <page key="NA" name="(NA)"/>
