@@ -290,3 +290,7 @@ Clients can only expect a server to check these headers if the server declares t
 
 It is important to note that the characters @, *, and () are not allowed in the code, context, or value in a GET or while using the Required-Features header, since this would lead to ambiguous parsing. If an implementer's use case requires those characters, then only POST with a Parameters resource is allowed. 
 
+##### Security/Authorization
+
+The $feature-query operation and Required-Features header MAY take into account authorization.  For example, if querying for features when unauthorized, a server may choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. If no access is allowed for an unauthorized user, the $feature-query operation SHALL return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter. 
+
