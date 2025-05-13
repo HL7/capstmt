@@ -221,10 +221,10 @@ By default, when a client asks a server for it's capability statement using /met
 
 Features are identified by an expression that includes the scope in which the feature is being asserted. Here's some examples:
 
-* feature-query?param=updateCreate(true) - the server supports updateCreate on the update interaction for all resources
-* feature-query?param=searchInclude@CodeSystem(supplements) - the server supports _include=CodeSystem.supplements
-* feature-query?param=security.cors(false) - the server doesn't support CORS
-* feature-query?param=security.cors(true) - the client requires a server that supports CORS
+* $feature-query?param=updateCreate(true) - the server supports updateCreate on the update interaction for all resources
+* $feature-query?param=searchInclude@CodeSystem(supplements) - the server supports _include=CodeSystem.supplements
+* $feature-query?param=security.cors(false) - the server doesn't support CORS
+* $feature-query?param=security.cors(true) - the client requires a server that supports CORS
 
 The full details of the expression format are described below.
 
@@ -262,15 +262,15 @@ By default, when a client asks a server for it's capability statement using /met
 
 Clients can request that a server by using GET as follows:
 
-		GET [base]/feature-query?feature[@context](value)
+		GET [base]/$feature-query?feature[@context](value)
 
 For example, here is how you would ask if the Patient resource has read access:
 
-		GET [base]/feature-query?param=read@Patient(true)
+		GET [base]/$feature-query?param=read@Patient(true)
 
 Requesting multiple features:
 
-		GET [base]/feature-query?param=read@Patient(true)&param=update@Patient(true)
+		GET [base]/$feature-query?param=read@Patient(true)&param=update@Patient(true)
 
 ##### Feature Query using HTTP POST
 
