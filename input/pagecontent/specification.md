@@ -255,7 +255,6 @@ Responses
   * if a value is provided, does the supplied value match the server feature-supported value
   * if a value is not provided, does not exist
 
-
 By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried via the  [FeatureQuery](OperationDefinition-feature-query.html) operation using an HTTP GET or POST, or via an HTTP header.
 
 ##### Features Query using HTTP GET
@@ -286,4 +285,8 @@ Alternatively, a client can include a feature assertion on an HTTP header:
 The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for Patient.
 
 Clients can only expect a server to check these headers if the server declares that it does using the feature rest:server.feature-header = true.
+
+##### Syntax Restrictions
+
+It is important to note that the characters @, *, and () are not allowed in the code, context, or value in a GET or while using the Required-Features header, since this would lead to ambiguous parsing. If an implementer's use case requires those characters, then only POST with a Parameters resource is allowed. 
 
