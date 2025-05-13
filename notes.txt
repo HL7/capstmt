@@ -5,7 +5,7 @@
 * Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"? See https://jira.hl7.org/browse/FHIR-47257.
 * Section 3.1.2, discuss the todo...
 * Review the errors in the QA file. Are they legit, or are they IG publisher issues? 
-* Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead?
+* Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead? Would be related to https://jira.hl7.org/browse/FHIR-47425
 * When the IG went to ballot, this was for FHIR R4, but Grahame changed it to 5.0.0. Is that what we really want?
 
 
