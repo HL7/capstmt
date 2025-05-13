@@ -276,7 +276,7 @@ Requesting multiple features:
 
 TBD: add example in/out params and explain invoking them in a POST
 
-##### Featuires Query using the Required-Features HTTP Header
+##### Featuires Negotiation using the Required-Features HTTP Header
 
 Alternatively, a client can include a feature assertion on an HTTP header:
 
@@ -286,6 +286,8 @@ Alternatively, a client can include a feature assertion on an HTTP header:
 The server checks the header, and return a 501 Not implemented if it does not support reading historical entries for Patient.
 
 Clients can only expect a server to check these headers if the server declares that it does using the feature rest:server.feature-header = true.
+
+While there are two mechanisms to check for feature support (HTTP header and the $feature-query operation), these mechanisms have different purposes.  The HTTP header approach will limit whether the requested HTTP action will be performed based on whether the specified feature(s) are supported, while the $feature-query operation acts as a query that returns what features the system supports.
 
 ##### Syntax Restrictions
 
