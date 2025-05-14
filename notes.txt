@@ -1,13 +1,37 @@
-* How will instances of FeatureDefinition be stored/found? In a registry somewhere? Or should we map the model to a Basic resource with extensions so they can be stored on a FHIR R4 server? How about making this a resource in R6, or is it too late at this point? Related to https://jira.hl7.org/browse/FHIR-47956 and https://jira.hl7.org/browse/FHIR-47952
-* FeatureDefinition.valueSet: is this the ValueSet for FeatureDefinition.valueType, the qualifiers, or both? Is there ever a case where the qualifiers will need a different ValueSet?
-* FeatureDefinition.qualifier: should this be required? Seems to be the only place to define the code to use when calling the feature via GET.
-* Create a profile for TerminologyCapabilites to show where the feature extension is allowed?
-* Can we make the feature extension a simple extension with just a canonical reference as the value? If not, can we restrict value to a boolean and code in the complex extension, or do we need the full set of datatypes? The current example only shows the FeatureDefinition version there, but that could just be appended to the canonical if important.
-* Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"? See https://jira.hl7.org/browse/FHIR-47257.
-* Section 3.1.2, discuss the todo...
-* Review the errors in the QA file about FeatureSupport not being canonical (even though based on CanonicalResource). Are they legit, or are they IG publisher issues? 
-* Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead? Would be related to https://jira.hl7.org/browse/FHIR-47425
-* When the IG went to ballot, this was for FHIR R4, but Grahame changed it to 5.0.0. Is that what we really want?
+# Notes
+
+Vote on "no comment" group. 
+
+Move NewCapabilityStatement FHIR-I tickets against FHIR Core to the AFF IG?
+
+When the IG went to ballot, this was for FHIR R4(and that's what the PSS calls out), but Grahame changed it to 5.0.0. Is that what we really want?
+
+Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead? Would be related to https://jira.hl7.org/browse/FHIR-47425
+
+How will instances of FeatureDefinition be stored/found? In a registry somewhere? Or should we map the model to a Basic resource with extensions so they can be stored on a FHIR R4 server? How about making this a resource in R6, or is it too late at this point? Related to https://jira.hl7.org/browse/FHIR-47956 and https://jira.hl7.org/browse/FHIR-47952
+
+Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"? See https://jira.hl7.org/browse/FHIR-47257.
+
+FeatureDefinition.valueSet: is this the ValueSet for FeatureDefinition.valueType, the qualifiers, or both? Does FeatureDefinition.qualifier.valueType need to be a constrained set of codes from FeatureDefinition.valueType?
+
+
+FeatureDefinition.qualifier: should this be required? Seems to be the only place to define the code to use when calling the feature via GET. If not, does FeatureDefinition.name become the code? For example, for FeatureSupport would it be: 
+
+GET [base]/$feature-query?FeatureSupport
+
+Should we create a profile for TerminologyCapabilites to show where the feature extension is allowed?
+
+Can we make the feature extension a simple extension with just a canonical reference as the value? If not, can we restrict value to a boolean and code in the complex extension, or do we need the full set of datatypes? The current example only shows the FeatureDefinition version there, but that could just be appended to the canonical if important.
+
+
+
+Section 3.3, discuss "todo…."
+Section 3.5, discuss "When an application fetches ... up to here…."
+
+Review the errors in the QA file about FeatureSupport not being canonical (even though based on CanonicalResource). Are they legit, or are they IG publisher issues? 
+
+
+
 
 
 
