@@ -299,7 +299,7 @@ JSON example:
       "part" : [
         {
           "name" : "definition",
-          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
+          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureSupport"
         },
         {
           "name" : "value",
@@ -322,7 +322,7 @@ XML example:
 		<name value="feature"/>
 		<part>
 			<name value="definition"/>
-			<valueCanonical value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"/>
+			<valueCanonical value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureSupport"/>
 		</part>
 		<part>
 			<name value="value"/>
@@ -351,7 +351,7 @@ JSON example
       "part" : [
         {
           "name" : "definition",
-          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"
+          "valueCanonical" : "http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureSupport"
         },
         {
           "name" : "value",
@@ -385,7 +385,7 @@ XML example
     <part>
       <name value="definition"/>
       <valueCanonical
-                      value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"/>
+                      value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureSupport"/>
     </part>
     <part>
       <name value="value"/>
