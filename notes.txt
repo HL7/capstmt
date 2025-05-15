@@ -1,35 +1,33 @@
 # Notes
 
-Vote on "no comment" group. 
+Vote on "no comment" group from ballot.
 
-Move NewCapabilityStatement FHIR-I tickets against FHIR Core to the AFF IG?
+I have flagged 3 comments for potentially reopening because they may no longer be applicable given other changes. Can review now or on a future FHIR-I call. 
 
-When the IG went to ballot this was intended to be for FHIR R4, but Grahame changed it to 5.0.0. Is that what we really want? 
+Move NewCapabilityStatement FHIR-I tickets currently on FHIR Core to the AFF IG?
 
-Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore, so I removed them for now. Maybe add some additional example FeatureDefinition instances instead? Would be related to https://jira.hl7.org/browse/FHIR-47425
+Do we still need the Capability Feature code system and value set? They don't seem to be referenced anywhere anymore. Maybe add some additional example FeatureDefinition instances instead? Would be related to https://jira.hl7.org/browse/FHIR-47425
 
 How will instances of FeatureDefinition be stored/found? In a registry somewhere? Or should we map the model to a Basic resource with extensions so they can be stored on a FHIR R4 server? How about making this a resource in R6, or is it too late at this point? Related to https://jira.hl7.org/browse/FHIR-47956 and https://jira.hl7.org/browse/FHIR-47952
 
 Review the processing status codes. Do they all still make sense? What does a processing status of "feature" mean? How about "context"? See https://jira.hl7.org/browse/FHIR-47257.
 
+If we end up keeping the CapabilityStatement profile (see https://jira.hl7.org/browse/FHIR-46677 which we may want to reopen) should we create a profile for TerminologyCapabilites to show where the feature extension is allowed?
+
+When the IG went to ballot this was intended to be for FHIR R4, but Grahame changed it to 5.0.0. Is that what we really want? 
+
 We have FeatureDefinition.valueSet and FeatureDefinition.qualifier.valueType. Do they need to be related in anyway? Do the values in the qualifier need to be a subset of those at the root?
 
-FeatureDefinition.qualifier: should this be required? Seems to be the only place to define the code to use when calling the feature via GET. If not, does FeatureDefinition.name become the code, or do we need a new FeatureDefinition.code field? For example, for FeatureSupport, which defines no code, would you call it like this?
+FeatureDefinition.qualifier: should this be required? Seems to be the only place to define the code to use when calling the feature via GET. If not, does FeatureDefinition.name become the code, or do we need a new FeatureDefinition.code field? For example, for FeatureSupport, would you call it as follows?
 
-GET [base]/$feature-query?FeatureSupport
-
-If we end up keeping the CapabilityStatement profile (see https://jira.hl7.org/browse/FHIR-46677 which we may want to reopen) should we create a profile for TerminologyCapabilites to show where the feature extension is allowed?
+GET [base]/$feature-query?ApplicationFeatureSupport
 
 Can we make the feature extension a simple extension with just a canonical reference as the value? If not, can we restrict value to a boolean and code in the complex extension, or do we need the full set of datatypes? The current example only shows the FeatureDefinition version there, but that could just be appended to the canonical if important.
 
 Section 3.3, discuss "todo…."
 Section 3.5, discuss "When an application fetches ... up to here…."
 
-Review the errors in the QA file about FeatureSupport not being canonical (even though based on CanonicalResource). Are they legit, or are they IG publisher issues? 
-
-
-
-
+Review the errors in the QA file about FeatureSupport not being canonical (even though based on CanonicalResource). Are they legit, or are they IG publisher issues related to FS being a logical model? 
 
 
 
