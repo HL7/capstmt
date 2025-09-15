@@ -10,7 +10,7 @@ parameters to an operation, the ability to expose certain security settings, etc
 
 Features may be software behaviors that are directly related to FHIR based interoperability, such 
 as "forces version-aware updates on resources", or they may be more general - such as "passes a
-testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate
+testing protocol" (potentially defined using a [[[TestScript]]]) - or they may relate
 to the user interface/experience, such as "the interface complies to a [named national specification]".
 
 Features may have qualifiers that indicate in what contexts a feature applies, e.g. a feature such 
