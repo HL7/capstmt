@@ -64,7 +64,8 @@ supports. This feature is used by applications to declare that they support the 
 
 Applications can implement some of all of this specification without declaring that they support the application feature framework, but if they do declare that it is supported, they SHALL support the following functionality:
 
-* todo....
+* SHALL respond to the $feature-query operation
+* SHOULD support the Required-Features header
 
 Note: clients can query for features without first checking for FeatureSupport, understanding that if the target server or application does not support this framework, the response(s) will not conform to those detailed in this specification.
 
