@@ -1,52 +1,8 @@
 == Suppressed Messages ==
 
-
-# The following warnings are in the FHIR R4 core CapabiltyStatement resource definition and only appears in the snapshot of the profile in this IG
-
-WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace ' not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))'
-
-WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[12].binding: The definition for the element 'CapabilityStatement.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[22].binding: The definition for the element 'CapabilityStatement.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[26].binding: The definition for the element 'CapabilityStatement.kind' binds to the value set 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureCapabilityStatement: StructureDefinition.snapshot.element[68].binding: The definition for the element 'CapabilityStatement.rest.resource.type' binds to the value set 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureDefinition: StructureDefinition.snapshot.element[12].binding: The definition for the element 'FeatureDefinition.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureDefinition: StructureDefinition.snapshot.element[22].binding: The definition for the element 'FeatureDefinition.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.differential.element[18].binding: The definition for the element 'Parameters.parameter.part.value[x]' binds to the value set 'http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs' which is experimental, but this structure is not labeled as experimental
-
-WARNING: StructureDefinition/FeatureQueryOutputParameters: StructureDefinition.snapshot.element[57].binding: The definition for the element 'Parameters.parameter.part.value[x]' binds to the value set 'http://hl7.org/fhir/uv/application-feature/ValueSet/processing-status-vs' which is experimental, but this structure is not labeled as experimental
-
 # Setting jurisdiction to 001 'World' causes the following informational message
 
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
-
-# URLs that are not intended to resolve
-
-URL value 'versioning' does not resolve
-URL value 'versioned' does not resolve
-
-# Canonical URLs that won't resolve until publication
-
-Canonical URL 'https://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query' does not resolve
-Canonical URL 'http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport' does not resolve
-
-
-# The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
-
-INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-
-# The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
-
-INFORMATION: CodeSystem/capability-feature-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
-# The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
-
-INFORMATION: CodeSystem/capability-feature-value-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
 
