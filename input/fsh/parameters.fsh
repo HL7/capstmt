@@ -28,7 +28,8 @@ Description:    "The Parameters profile used to define the inputs of the [$featu
 * parameter.part[context].name = "context"
 * parameter.part[context].value[x] 1..1 MS
 * parameter.part[context].value[x] only string
-* parameter.part[context].value[x] ^short = "An expression showing the context of the feature in the CapabilityStatement"
+* parameter.part[context].value[x] ^short = "The context on which this feature is defined."
+* parameter.part[context].value[x] ^definition = "The context on which this feature is defined. The context declared in this parameter must align with one or more of the contexts in the FeatureDefinition."
 
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
@@ -69,7 +70,8 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter.part[context].name = "context"
 * parameter.part[context].value[x] 1..1 MS
 * parameter.part[context].value[x] only string
-* parameter.part[context].value[x] ^short = "An expression showing the context of the feature in the CapabilityStatement"
+* parameter.part[context].value[x] ^short = "The context on which this feature is defined."
+* parameter.part[context].value[x] ^definition = "The context on which this feature is defined. The context declared in this parameter must align with one or more of the contexts in the FeatureDefinition."
 
 * parameter.part[value].name 1..1 MS
 * parameter.part[value].name = "value"
