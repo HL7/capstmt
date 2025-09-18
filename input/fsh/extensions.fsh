@@ -8,7 +8,14 @@ Description: "This extension documents the features of a system using code/value
 * ^context[=].expression = "TerminologyCapabilities"
 * extension contains
     definition 1..1 MS and
+	context 0..* MS and
     value 1..1 MS 
 * extension[definition].value[x] 1..1
 * extension[definition].value[x] only Canonical(FeatureDefinition)
-* extension[value].value[x] 1..1  // should this be restricted to boolean? If not needed at all can we just make this a simple extension with the canonical as the value?
+* extension[context].value[x] 1..1 
+* extension[context].value[x] only string
+* extension[context].value[x] ^short = "The context(s) on which this feature can be defined. The context(s) declared in this extension must align with one or more of the contexts in the FeatureDefinition."
+* extension[value].value[x] 1..1  
+* extension[value].value[x] ^short = "The value of the feature (HOW DOES THIS RELATE TO THE FIELDS IN FEATUREDEFINITION?)" 
+
+// """ Unclear how this relates to the fields in FeatureDefinition. Does this need to match FeatureDefinition.valueType? Is so it is redundant. If not, then what is this for? Qualifiers? """

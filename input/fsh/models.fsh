@@ -14,10 +14,16 @@ generally impacts on the handling of data received from or provided to from the 
   If a value set is specified, the value of the data type must come from the value set, and the 
   value type must be one of the bindeable types defined in the FHIR specification
 """
-* context 0..* url "The FHIR elements on which this feature can be defined" """
-  The elements on which this feature can be defined. These URLs take the form or Canonica(StructureDefinition)#{element-id},
-  where The structure definition is a reference to a FHIR resource - usually CapabilityStatement of TerminologyCapabilities, 
-  and the element-id is a defined element within one of the resources. This is used to state where the feature applies. some
+* contextDefinition 1..1 markdown "Human readable documentation describing how to interpret the context fields" """
+  The contextDefinition provides human readable documentation describing how to interpret the context fields. 
+"""
+* contextExpressionLanguage 0..1 code "The mime type of context, if context uses an expression language" """
+  The contextExpressionLanguage specifies the mime type of context, if context uses an expression language.
+"""
+* contextExpressionLanguage from http://hl7.org/fhir/ValueSet/mimetypes
+
+* context 0..* string "The context(s) on which this feature can be defined" """
+  The context(s) on which this feature can be defined. This is used to state where the feature applies. some
   features are defined on applications, but others apply to particular resources, or operations on resources, or particular
   code systems etc
 """
