@@ -11,3 +11,15 @@ Description: "CodeSystem for feature-query processing status"
 * #unauthorized "Unauthorized" "Processing failed because the authorization was required and failed"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false
+
+
+CodeSystem: FavoriteColorCS
+Id: favorit-color-cs
+Title: "Favorite Color Example Code System"
+Description: "CodeSystem for FavoriteColor Feature Example"
+* ^caseSensitive = true
+* #blue "Blue" "Blue"
+* #yellow "Yellow" "Yellow"
+* #blue-no-yelaaaaah "Blue, no YelAAAAAAH!" "Said blue instead of yellow and was tossed from the Bridge of Death "
+* ^copyright = "This CodeSystem is not copyrighted."
+* ^experimental = false
