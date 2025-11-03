@@ -16,6 +16,6 @@ Description: "This extension documents the features of a system using code/value
 * extension[context].value[x] only string
 * extension[context].value[x] ^short = "The context(s) on which this feature can be defined. The context(s) declared in this extension must align with one or more of the contexts in the FeatureDefinition."
 * extension[value].value[x] 1..1  
-* extension[value].value[x] ^short = "The value of the feature (HOW DOES THIS RELATE TO THE FIELDS IN FEATUREDEFINITION?)" 
+* extension[value].value[x] ^short = "The value of the feature. Must align with the type and ValueSet (if a code type) in the FeatureDefinition." 
 
 // """ Unclear how this relates to the fields in FeatureDefinition. Does this need to match FeatureDefinition.valueType? Is so it is redundant. If not, then what is this for? Qualifiers? """

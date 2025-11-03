@@ -26,7 +26,6 @@
 <artifact id="Parameters/FeatureSupportInputParametersExample" key="Parameters-FeatureSupportInputParametersExample" name="FeatureSupportInputParametersExample"/>
 <artifact id="Parameters/FeatureSupportOutputParametersExample" key="Parameters-FeatureSupportOutputParametersExample" name="FeatureSupportOutputParametersExample"/>
 <artifact id="OperationDefinition/CapabilityStatement-subset" key="OperationDefinition-CapabilityStatement-subset" name="Fetch a subset of the CapabilityStatement resource"/>
-<artifact id="FeatureDefinition/PatientRead" key="FeatureDefinition-PatientRead" name="PatientRead"/>
 <artifact id="CodeSystem/processing-status-cs" key="CodeSystem-processing-status-cs" name="Processing Status Code System"/>
 <artifact id="ValueSet/processing-status-vs" key="ValueSet-processing-status-vs" name="Processing Status Value VS"/>
 <artifact id="OperationDefinition/CapabilityStatement-conforms" key="OperationDefinition-CapabilityStatement-conforms" name="Test if a server implements a client's required operations"/>

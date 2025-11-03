@@ -2,7 +2,7 @@ Instance:   FavoriteColor
 InstanceOf: FeatureDefinition
 Description: """Allows an application to specify its favorite color from a predefined list."""
 Usage:  #example
-* url = "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/PatientRead"
+* url = "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FavoriteColor"
 * name = "FavoriteColor"
 * description = "Allows an application to specify its favorite color from a predefined list."
 * status = #active
