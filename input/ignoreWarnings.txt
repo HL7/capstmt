@@ -19,3 +19,23 @@ Pinned the version of http://hl7.org/fhir/uv/application-feature/StructureDefini
 
 The resource CapabilityStatement/FeatureCapabilityStatementExample could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
+# The code system in question is for an example instance only, and thus should not be in THO
+
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# Ignore informational messages about references to experimental CodeSystem and ValueSet resources from FHIR R5
+
+Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+
+The definition for the element 'CapabilityStatement.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+The definition for the element 'CapabilityStatement.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+The definition for the element 'CapabilityStatement.kind' binds to the value set 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+The definition for the element 'CapabilityStatement.rest.resource.type' binds to the value set 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+The definition for the element 'FeatureDefinition.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+The definition for the element 'FeatureDefinition.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
+

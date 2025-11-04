@@ -62,10 +62,10 @@ and in xml
 The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
 supports. This feature is used by applications to declare that they support the application feature framework at the root of their capability statement. 
 
-Applications can implement some of all of this specification without declaring that they support the application feature framework, but if they do declare that it is supported, they SHALL support the following functionality:
+<span class="fhir-conformance">Applications can implement some of all of this specification without declaring that they support the application feature framework, but if they do declare that it is supported, they SHALL support the following functionality</span>:
 
-* SHALL respond to the $feature-query operation
-* SHOULD support the Required-Features header
+* <span class="fhir-conformance">SHALL respond to the $feature-query operation</span>
+* <span class="fhir-conformance">SHOULD support the Required-Features </span>
 
 Note: clients can query for features without first checking for FeatureSupport, understanding that if the target server or application does not support this framework, the response(s) will not conform to those detailed in this specification.
 
@@ -180,9 +180,9 @@ Note, however, that the feature scopes are not restricted to the contexts implie
 
 ### Asking for features in a CapabilityStatement 
 
-In general, default CapabilityStatements returned from the ```/metadata``` endpoint do not include 
+<span class="fhir-conformance">In general, default CapabilityStatements returned from the ```/metadata``` endpoint do not include 
 Feature assertions (other then possibly the FeatureFramework Feature itself), though specific features or 
-other implementation guides may require that features are populated in the CapabilityStatement by default.
+other implementation guides MAY require that features are populated in the CapabilityStatement by default</span>.
 For other CapabilityStatements - e.g. those produced to store in registries as static copies, it is at the
 discretion of the application to decide how much to populate the CapabilityStatement with the applicable 
 features.
@@ -230,7 +230,7 @@ Features are identified by an expression that includes the scope in which the fe
 
 The full details of the expression format are described below.
 
-Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size. Clients should instead use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header to determine if the server supports needed features. 
+<span class="fhir-conformance">Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size</span>. <span class="fhir-conformance">Clients SHOULD use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header to determine if the server supports needed features</span>. 
 
 ### Asking for Features
 
@@ -421,5 +421,5 @@ It is important to note that the characters @, *, and () are not allowed in the 
 
 ### Security/Authorization
 
-The $feature-query operation and Required-Features header MAY take into account authorization.  For example, if querying for features when unauthorized, a server may choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. If no access is allowed for an unauthorized user, the $feature-query operation SHALL return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter. 
+The $feature-query operation and Required-Features header MAY take into account authorization.  For example, if querying for features when unauthorized, a server may choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. <span class="fhir-conformance">If no access is allowed for an unauthorized user, the $feature-query operation SHALL return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter</span>. 
 
