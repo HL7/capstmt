@@ -43,7 +43,7 @@
   </identifier>
   <version value="6.0.0"/>
   <name value="Conforms"/>
-  <title value="Test if a server implements a client's required operations"/>
+  <title value="Test if a server conforms to a client's required operations"/>
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2021-01-05T10:01:24+11:00"/>
