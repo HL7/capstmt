@@ -275,8 +275,6 @@ Requesting multiple features:
 
 #### Feature Query using HTTP POST
 
-TBD: add example in/out params and explain invoking them in a POST
-
 Clients can use HTTP POST with a Parameters resource to query for features. The following example shows how to use POST to check if a server supports this feature framework:
 
 		POST [base]/$feature-query
