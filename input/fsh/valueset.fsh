@@ -11,7 +11,7 @@ Description: "The processing status of a $feature-query request"
 
 ValueSet: FavoriteColorVS
 Id: favorite-color-vs
-Title: "Favorite Color VS"
+Title: "Favorite Color Example VS"
 Description: "ValueSet for FavoriteColor Feature Example"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
