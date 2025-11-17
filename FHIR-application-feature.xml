@@ -28,7 +28,7 @@
 <artifact id="OperationDefinition/CapabilityStatement-subset" key="OperationDefinition-CapabilityStatement-subset" name="Fetch a subset of the CapabilityStatement resource"/>
 <artifact id="CodeSystem/processing-status-cs" key="CodeSystem-processing-status-cs" name="Processing Status Code System"/>
 <artifact id="ValueSet/processing-status-vs" key="ValueSet-processing-status-vs" name="Processing Status Value VS"/>
-<artifact id="OperationDefinition/CapabilityStatement-conforms" key="OperationDefinition-CapabilityStatement-conforms" name="Test if a server implements a client's required operations"/>
+<artifact id="OperationDefinition/CapabilityStatement-conforms" key="OperationDefinition-CapabilityStatement-conforms" name="Test if a server conforms to a client's required operations"/>
 <artifact id="OperationDefinition/CapabilityStatement-implements" key="OperationDefinition-CapabilityStatement-implements" name="Test if a server implements a client's required operations"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
