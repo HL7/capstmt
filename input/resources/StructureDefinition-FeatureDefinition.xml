@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="FeatureDefinition"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-implements">
+    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/CanonicalResource"/>
+  </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fhir"/>
   </extension>
@@ -20,9 +23,6 @@
         <valueCanonical value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
       </extension>
     </valueCode>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-implements">
-    <valueCanonical value="http://hl7.org/fhir/StructureDefinition/CanonicalResource"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition"/>
   <version value="1.0.0"/>
