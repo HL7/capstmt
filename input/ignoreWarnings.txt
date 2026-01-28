@@ -1,5 +1,14 @@
 == Suppressed Messages ==
 
+# Acknowledge binding applies to all types
+
+The element FeatureDefinition.versionAlgorithm[x] has a binding, and has multiple types subject to bindings ([string, Coding]). The binding will apply to all the types
+
+# Invalid warnings, the in/out profiles do have "feature" and "return" pararmeters.
+
+The 'in' profile does not have a parameter 'feature' but it is in the parameters list in the operation definition
+The 'out' profile does not have a parameter 'return' but it is in the parameters list in the operation definition
+
 # Setting jurisdiction to 001 'World' causes the following informational message
 
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
@@ -12,8 +21,6 @@ INFORMATION: CodeSystem/processing-status-cs: CodeSystem: Most code systems defi
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/shareablevalueset|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# Information about pinned versions
-Pinned the version of http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition to 1.0.0 from choices of 1.0.0 (hl7.fhir.uv.application-feature#1.0.0), {{unversioned}} (null)
 
 # Skipping the OID for this example, as not important
 

@@ -3,11 +3,11 @@
 
 Welcome to the FHIR Application Feature Framework.
 
-A Feature is a software behavior that applications may choose to implement, or be required to implement,
+A Feature is a software behavior that applications might choose to implement, or be required to implement,
 where the existence (or not) of the behavior it describes changes the behavior of other actors in the 
-ecosystem. Features may be software behaviors that are directly related to FHIR based interoperability, 
-such  as "forces version-aware updates on resources", or they may be more general - such as "passes a
-testing protocol" (potentially defined using a [[[TestScript]]] - or they may relate to the user interface/experience, 
+ecosystem. Features might be software behaviors that are directly related to FHIR based interoperability, 
+such  as "forces version-aware updates on resources", or they might be more general - such as "passes a
+testing protocol" (potentially defined using a [[[TestScript]]] - or they might relate to the user interface/experience, 
 such as "the interface complies to [some named national specification]".
 
 There is no scope limitation to the kinds of features that might be described, but the intent of this
@@ -17,7 +17,7 @@ FHIR exchange.
 ### Defining Features 
 
 Features are defined using [FeatureDefinitions](StructureDefinition-FeatureDefinition.html). This is a 
-logical structure that looks a lot like a FHIR resource (and may become one in a future version of the 
+logical structure that looks a lot like a FHIR resource (and might become one in a future version of the 
 FHIR specification). The important parts of the FeatureDefintion are:
 
 * The URL, which defines the Feature 
@@ -182,7 +182,7 @@ Note, however, that the feature scopes are not restricted to the contexts implie
 
 <span class="fhir-conformance">In general, default CapabilityStatements returned from the ```/metadata``` endpoint do not include 
 Feature assertions (other then possibly the FeatureFramework Feature itself), though specific features or 
-other implementation guides MAY require that features are populated in the CapabilityStatement by default</span>.
+other implementation guides **MAY** require that features are populated in the CapabilityStatement by default</span>.
 For other CapabilityStatements - e.g. those produced to store in registries as static copies, it is at the
 discretion of the application to decide how much to populate the CapabilityStatement with the applicable 
 features.
@@ -230,7 +230,7 @@ Features are identified by an expression that includes the scope in which the fe
 
 The full details of the expression format are described below.
 
-<span class="fhir-conformance">Clients interacting with a FHIR server that supports this implementation guide SHOULD NOT download entire CapabilityStatement resources, since they may be many megabytes in size</span>. <span class="fhir-conformance">Clients SHOULD use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header to determine if the server supports needed features</span>. 
+<span class="fhir-conformance">Clients interacting with a FHIR server that supports this implementation guide **SHOULD NOT** download entire CapabilityStatement resources, since they could be many megabytes in size</span>. <span class="fhir-conformance">Clients **SHOULD** use the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header to determine if the server supports needed features</span>. 
 
 ### Asking for Features
 
@@ -421,5 +421,5 @@ It is important to note that the characters @, *, and () are not allowed in the 
 
 ### Security/Authorization
 
-The $feature-query operation and Required-Features header MAY take into account authorization.  For example, if querying for features when unauthorized, a server may choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. <span class="fhir-conformance">If no access is allowed for an unauthorized user, the $feature-query operation SHALL return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter</span>. 
+<span class="fhir-conformance">The $feature-query operation and Required-Features header **MAY** take into account authorization</span>.  For example, if querying for features when unauthorized, a server could choose to only expose those features available to unauthorized clients, while if querying when authenticated, those features that are available to the authenticated client are returned. <span class="fhir-conformance">If no access is allowed for an unauthorized user, the $feature-query operation **SHALL** return a [processing status](CodeSystem-processing-status-cs.html) of unauthorized in the return parameter</span>. 
 
