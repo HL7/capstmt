@@ -20,9 +20,9 @@ Usage: #definition
 * parameter[0].use = #in
 * parameter[0].min = 1
 * parameter[0].max = "1"
-* parameter[0].documentation = "The feature(s) that are the subject of the query"
+* parameter[0].documentation = "The feature that is the subject of the query"
 * parameter[0].type = #Parameters
-* parameter[1].name = #return
+* parameter[1].name = #feature
 * parameter[1].use = #out
 * parameter[1].min = 0
 * parameter[1].max = "1"

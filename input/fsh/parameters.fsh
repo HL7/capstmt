@@ -48,7 +48,7 @@ Description:    "The Parameters profile used to define the outputs of the [$feat
 * parameter 0..* MS
 * parameter ^short = "One repetition of the parameter element per parameter element in the input Parameters resource"
 * parameter.name 1..1 MS
-* parameter.name = "return"
+* parameter.name = "feature"
 * parameter.part ^slicing.discriminator.type = #value
 * parameter.part ^slicing.discriminator.path = "$this.name"
 * parameter.part ^slicing.rules = #open

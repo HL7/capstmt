@@ -4,10 +4,10 @@
 
 The element FeatureDefinition.versionAlgorithm[x] has a binding, and has multiple types subject to bindings ([string, Coding]). The binding will apply to all the types
 
-# Invalid warnings, the in/out profiles do have "feature" and "return" pararmeters.
+# Invalid warnings, the in/out profiles do have "feature" pararmeters.
 
 The 'in' profile does not have a parameter 'feature' but it is in the parameters list in the operation definition
-The 'out' profile does not have a parameter 'return' but it is in the parameters list in the operation definition
+The 'out' profile does not have a parameter 'feature' but it is in the parameters list in the operation definition
 
 # Setting jurisdiction to 001 'World' causes the following informational message
 

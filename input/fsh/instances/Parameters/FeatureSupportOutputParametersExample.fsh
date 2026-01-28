@@ -2,7 +2,7 @@ Instance: FeatureSupportOutputParametersExample
 InstanceOf: FeatureQueryOutputParameters
 Description: "An example input parameter"
 Usage: #example
-* parameter.name = "return"
+* parameter.name = "feature"
 * parameter.part[name].name = "definition"
 * parameter.part[name].valueCanonical = "http://hl7.org/fhir/uv/application-feature/FeatureDefinition/FeatureSupport"
 * parameter.part[value].name = "value"

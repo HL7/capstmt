@@ -340,7 +340,7 @@ JSON example
   },
   "parameter" : [
     {
-      "name" : "return",
+      "name" : "feature",
       "part" : [
         {
           "name" : "definition",
@@ -374,7 +374,7 @@ XML example
              value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"/>
   </meta>
   <parameter>
-    <name value="return"/>
+    <name value="feature"/>
     <part>
       <name value="definition"/>
       <valueCanonical
