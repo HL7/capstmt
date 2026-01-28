@@ -187,12 +187,6 @@ For other CapabilityStatements - e.g. those produced to store in registries as s
 discretion of the application to decide how much to populate the CapabilityStatement with the applicable 
 features.
 
-When an application fetches 
-
------ 
-
-up to here....
-
 ------
 
 General Patterns
@@ -217,7 +211,7 @@ Responses
   * if a value is not provided, does not exist
 
 
-By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by search parameter or via an operation.
+By default, when a client asks a server for it's capability statement using /metadata, which features to report on is at the discretion of the server. Typically, servers will not report any features by default. Features can be queried by the [FeatureQuery](OperationDefinition-feature-query.html) operation or the [Required-Features](#feature-negotiation-using-the-required-features-http-header) HTTP header.
 
 ### Identifying a Feature
 
@@ -346,7 +340,7 @@ JSON example
   },
   "parameter" : [
     {
-      "name" : "feature",
+      "name" : "return",
       "part" : [
         {
           "name" : "definition",
@@ -380,7 +374,7 @@ XML example
              value="http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureQueryOutputParameters"/>
   </meta>
   <parameter>
-    <name value="feature"/>
+    <name value="return"/>
     <part>
       <name value="definition"/>
       <valueCanonical
