@@ -59,7 +59,7 @@ and in xml
 
 ### Features Defined in this Specification
 
-The Application Feature Framework only defines one actual feature: [FeatureSupport](FeatureDefinition-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
+The Application Feature Framework only defines one actual feature: [FeatureSupport](Binary-FeatureSupport.html), which declares the most recent version of the feature framework that the application 
 supports. This feature is used by applications to declare that they support the application feature framework at the root of their capability statement. 
 
 <span class="fhir-conformance">Applications can implement some of all of this specification without declaring that they support the application feature framework, but if they do declare that it is supported, they SHALL support the following functionality</span>:

@@ -5,6 +5,7 @@ Description: """
 A definition of a feature that applications may implement, or be required to implement. Features are an aspect of a an  applications implementation that 
 generally impacts on the handling of data received from or provided to from the application, which makes it worth declaring. Once declared,  
 """
+* ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target1].valueBoolean = true
 * valueType 1..1 code "Type of value associated with the feature" """
   Features are very boolean: true or false for whether the application implements the feature, but the value 
   associated with the feature might be a number, a string, or some kind of code

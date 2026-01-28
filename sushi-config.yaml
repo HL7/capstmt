@@ -44,3 +44,12 @@ instanceOptions:
 dependencies:
   hl7.fhir.uv.extensions: current
 
+resources:
+  Binary/FeatureSupport:
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
+        valueCanonical: http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition
+  Binary/FavoriteColor:
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
+        valueCanonical: http://hl7.org/fhir/uv/application-feature/StructureDefinition/FeatureDefinition

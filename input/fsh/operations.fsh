@@ -11,7 +11,6 @@ Usage: #definition
 * kind = #operation
 * description = "This operation allows clients to query for features supported by a server. The operation may be invoked via HTTP GET or POST. Details are on the [specification](specification.html#asking-for-features) page."
 * code = #feature-query
-* base = "https://hl7.org/fhir/uv/application-feature/OperationDefinition/feature-query"
 * system = true
 * type = true
 * instance = false

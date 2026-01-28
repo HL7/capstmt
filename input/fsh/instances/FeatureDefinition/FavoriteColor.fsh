@@ -7,7 +7,7 @@ Usage:  #example
 * description = "Allows an application to specify its favorite color from a predefined list."
 * status = #active
 * valueType = #code
-* valueSet = "http://hl7.org/fhir/uv/application-feature/StructureDefinition/favorite-color-vs"
+* valueSet = "http://hl7.org/fhir/uv/application-feature/ValueSet/favorite-color-vs"
 * contextDefinition = "The context is the application as a whole"
 
 
