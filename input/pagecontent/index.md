@@ -8,13 +8,13 @@ This implementation guide is focused on 'features' of systems.  A 'feature' is a
 such as support for a type of resource, certain operation or search parameter, the ability to accept certain 
 parameters to an operation, the ability to expose certain security settings, etc.
 
-Features may be software behaviors that are directly related to FHIR based interoperability, such 
+Features may be software behaviors that are directly related to FHIR-based interoperability, such 
 as "forces version-aware updates on resources", or they may be more general - such as "passes a
 testing protocol" (potentially defined using a [[[TestScript]]]) - or they may relate
-to the user interface/experience, such as "the interface complies to a [named national specification]".
+to the user interface and/or user experience, such as "the interface conforms to [named national specification]".
 
-Features may have qualifiers that indicate in what contexts a feature applies, e.g. a feature such 
-as 'supports heirarchical expansions' might be limited to some code systems, and so the feature 
+Features may have qualifiers that indicate in what contexts a feature applies. For example, a feature such 
+as 'supports hierarchical expansions' might be limited to some code systems, and so the feature 
 is qualified by the identity of the code system.
 
 This implementation guide defines functionality to enable these behaviors:
@@ -40,7 +40,7 @@ The existing CapabilityStatement could support all these features by continuing 
 * Clients are often interested in a very specific subset of these features, but the existing design doesn't support subsetting the CapabilityStatement resource, or negotiation to find out whether specific features are supported
 * A lot of the things we could add to CapabilityStatement need further refinement - e.g. they might only be supported/required/etc in particular circumstances, for some subset of the possible set of resources 
 
-Discussion on these issues led to the design of this Application Feature Framework, where the features are defined using a terminological approach that allows for more flexibility around feature negotation. Note that this approach basically mandates feature negotation, because while the design of the resource itself is simplified, the actual instances of fully populated CapabilityStatement resources are very much larger. For this reason, the general intent is that by default, servers do not populate many features in their statements unless asked, though there is still utility in a fully populated feature statement.
+Discussion on these issues led to the design of this Application Feature Framework, where the features are defined using a terminological approach that allows for more flexibility around feature negotiation. Note that this approach basically mandates feature negotiation, because while the design of the resource itself is simplified, the actual instances of fully populated CapabilityStatement resources are very much larger. For this reason, the general intent is that by default, servers do not populate many features in their statements unless asked, though there is still utility in a fully populated feature statement.
 
 Most of the trial-use properties in CapabilityStatement are actually features, and they may be withdrawn in a future version of the FHIR specification once the Application Feature Framework is well-proven.
 
