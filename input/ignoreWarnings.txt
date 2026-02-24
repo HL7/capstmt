@@ -13,7 +13,7 @@ The 'out' profile does not have a parameter 'feature' but it is in the parameter
 
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 
-# The code systems in this IG need heavy review during ballot. They might change significantly or even be removed. 
+# The code systems in this IG need heavy review during the trial use period. They might change significantly or even be removed. Will revisit in the next release.
 
 INFORMATION: CodeSystem/processing-status-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
