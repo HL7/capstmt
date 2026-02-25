@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="favorite-color-cs"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/application-feature/CodeSystem/favorite-color-cs"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.19.16.2"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="FavoriteColorCS"/>
+  <title value="Favorite Color Example Code System"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-02-25T10:54:14-05:00"/>
+  <publisher value="HL7 International / FHIR Infrastructure"/>
+  <contact>
+    <name value="HL7 International / FHIR Infrastructure"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/fiwg"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem for FavoriteColor Feature Example"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This CodeSystem is not copyrighted."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="blue"/>
+    <display value="Blue"/>
+    <definition value="Blue"/>
+  </concept>
+  <concept>
+    <code value="yellow"/>
+    <display value="Yellow"/>
+    <definition value="Yellow"/>
+  </concept>
+  <concept>
+    <code value="blue-no-yelaaaaah"/>
+    <display value="Blue, no YelAAAAAAH!"/>
+    <definition value="Said blue instead of yellow and was tossed from the Bridge of Death"/>
+  </concept>
+</CodeSystem>

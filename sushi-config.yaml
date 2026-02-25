@@ -45,6 +45,14 @@ dependencies:
   hl7.fhir.uv.extensions: current
 
 resources:
+  CodeSystem/favorite-color-cs:
+    name: FavoriteColorCS
+    description: "Favorite Color Example Code System"
+    exampleBoolean: true
+  ValueSet/favorite-color-vs:
+    name: FavoriteColorVS
+    description: "ValueSet for FavoriteColor Feature Example"
+    exampleBoolean: true
   Binary/FeatureSupport:
     extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical

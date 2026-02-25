@@ -8,7 +8,7 @@ Description: "The processing status of a $feature-query request"
 * ^date = "2020-09-21"
 * include codes from system ProcessingStatusCS
 
-
+/*
 ValueSet: FavoriteColorVS
 Id: favorite-color-vs
 Title: "Favorite Color Example VS"
@@ -18,3 +18,4 @@ Description: "ValueSet for FavoriteColor Feature Example"
 * ^experimental = false
 * ^date = "2025-10-24"
 * include codes from system FavoriteColorCS
+*/
