@@ -43,6 +43,7 @@ instanceOptions:
   
 dependencies:
   hl7.fhir.uv.extensions: current
+#  hl7.fhir.uv.xver-r5.r4:0.1.0
 
 resources:
   CodeSystem/favorite-color-cs:
