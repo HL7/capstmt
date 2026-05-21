@@ -12,15 +12,4 @@ Description: "CodeSystem for feature-query processing status"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = false
 
-/*
-CodeSystem: FavoriteColorCS
-Id: favorite-color-cs
-Title: "Favorite Color Example Code System"
-Description: "CodeSystem for FavoriteColor Feature Example"
-* ^caseSensitive = true
-* #blue "Blue" "Blue"
-* #yellow "Yellow" "Yellow"
-* #blue-no-yelaaaaah "Blue, no YelAAAAAAH!" "Said blue instead of yellow and was tossed from the Bridge of Death"
-* ^copyright = "This CodeSystem is not copyrighted."
-* ^experimental = false
-*/
+// FavoriteColorExampleCS is in resources

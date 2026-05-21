@@ -4,7 +4,7 @@
 
 The element FeatureDefinition.versionAlgorithm[x] has a binding, and has multiple types subject to bindings ([string, Coding]). The binding will apply to all the types
 
-# Invalid warnings, the in/out profiles do have "feature" pararmeters.
+# Invalid warnings, the in/out profiles do have "feature" pararmeters. See this thread: https://chat.fhir.org/#narrow/channel/434649-Feature-Capability-Statement/topic/Parameters.20warning/with/596792538
 
 The 'in' profile does not have a parameter 'feature' but it is in the parameters list in the operation definition
 The 'out' profile does not have a parameter 'feature' but it is in the parameters list in the operation definition
@@ -13,7 +13,7 @@ The 'out' profile does not have a parameter 'feature' but it is in the parameter
 
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 
-# The code systems in this IG need heavy review during the trial use period. They might change significantly or even be removed. Will revisit in the next release.
+# This code system is on a code datatype with a required binding. Per FMG discussions this should remain in the IG and not move to THO. 
 
 INFORMATION: CodeSystem/processing-status-cs: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
@@ -26,7 +26,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 The resource CapabilityStatement/FeatureCapabilityStatementExample could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
-# The code system in question is for an example instance only, and thus should not be in THO
+# The FavoriteColorExampleCS is for an example instance only, and thus should not be in THO
 
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 

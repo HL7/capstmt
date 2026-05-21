@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="favorite-color-vs"/>
+  <id value="favorite-color-example-vs"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
@@ -22,13 +22,13 @@
       </extension>
     </valueCode>
   </extension>
-  <url value="http://hl7.org/fhir/uv/application-feature/ValueSet/favorite-color-vs"/>
+  <url value="http://hl7.org/fhir/uv/application-feature/ValueSet/favorite-color-example-vs"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.19.16.3"/>
   </identifier>
   <version value="1.0.0"/>
-  <name value="FavoriteColorVS"/>
+  <name value="FavoriteColorExampleVS"/>
   <title value="Favorite Color Example VS"/>
   <status value="active"/>
   <experimental value="false"/>
@@ -51,7 +51,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/application-feature/CodeSystem/favorite-color-cs"/>
+      <system value="http://hl7.org/fhir/uv/application-feature/CodeSystem/favorite-color-example-cs"/>
     </include>
   </compose>
 </ValueSet>

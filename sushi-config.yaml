@@ -11,8 +11,8 @@ title: FHIR Application Feature Framework Implementation Guide
 status: active # draft | active | retired | unknown
 version: 1.0.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2023+
-releaseLabel: STU1 # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+copyrightYear: 2026+
+releaseLabel: STU 1 # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
   
@@ -20,7 +20,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 1
+    valueInteger: 2
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: fhir
 publisher:
@@ -37,6 +37,7 @@ menu:
   Specification: specification.html
   Artifacts: artifacts.html
   Downloads: downloads.html
+  Change Log: change_log.html
 
 instanceOptions:
   manualSliceOrdering: true # true | false
@@ -46,11 +47,11 @@ dependencies:
 #  hl7.fhir.uv.xver-r5.r4:0.1.0
 
 resources:
-  CodeSystem/favorite-color-cs:
+  CodeSystem/favorite-color-example-cs:
     name: FavoriteColorCS
     description: "Favorite Color Example Code System"
     exampleBoolean: true
-  ValueSet/favorite-color-vs:
+  ValueSet/favorite-color-example-vs:
     name: FavoriteColorVS
     description: "ValueSet for FavoriteColor Feature Example"
     exampleBoolean: true

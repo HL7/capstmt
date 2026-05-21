@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="favorite-color-cs"/>
+  <id value="favorite-color-example-cs"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fhir"/>
   </extension>
@@ -19,13 +19,13 @@
       </extension>
     </valueCode>
   </extension>
-  <url value="http://hl7.org/fhir/uv/application-feature/CodeSystem/favorite-color-cs"/>
+  <url value="http://hl7.org/fhir/uv/application-feature/CodeSystem/favorite-color-example-cs"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.19.16.2"/>
   </identifier>
   <version value="1.0.0"/>
-  <name value="FavoriteColorCS"/>
+  <name value="FavoriteColorExampleCS"/>
   <title value="Favorite Color Example Code System"/>
   <status value="active"/>
   <experimental value="false"/>
